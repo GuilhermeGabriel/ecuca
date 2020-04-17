@@ -9,7 +9,7 @@ class ItemSimulado extends Component {
 
     render() {
         return (
-            <TouchableOpacity style={styles.container}>
+            <TouchableOpacity style={styles.container} onPress={this.props.onPressItem}>
                 <Text style={styles.title}>Nível {this.props.nivel} • {this.props.fase}º Fase • {this.props.ano}</Text>
                 <Text style={styles.title}>7/20 Concluídas </Text>
                 <ProgressBar progress={this.props.qC / 20} width={190} style={styles.progress} />

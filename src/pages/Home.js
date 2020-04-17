@@ -11,32 +11,37 @@ class Home extends Component {
 
     render() {
         return (
-            <View>
+            <View style={styles.container}>
                 <Text style={styles.title}>Bons estudos, Guilherme</Text>
+
+                <ScrollView>
+                    <ItemSimulado
+                        fase='1'
+                        nivel='2'
+                        ano='2005'
+                        qC='15'
+                        onPressItem={
+                            () => {
+                                this.props.navigation.navigate('Simulado')
+                            }}>
+                    </ItemSimulado>
+                </ScrollView>
+
                 <FloatingAction
-                    actions={actions}
+                    actions={[]}
                     onPressItem={name => {
                         console.log(`selected button: ${name}`);
                     }}
                 />
-
-                <ScrollView>
-                    <ItemSimulado fase='1' nivel='2' ano='2005' qC='15' ></ItemSimulado>
-                    <ItemSimulado fase='1' nivel='2' ano='2005' qC='15' ></ItemSimulado>
-                    <ItemSimulado fase='1' nivel='2' ano='2005' qC='15' ></ItemSimulado>
-                    <ItemSimulado fase='1' nivel='2' ano='2005' qC='15' ></ItemSimulado>
-                    <ItemSimulado fase='1' nivel='2' ano='2005' qC='15' ></ItemSimulado>
-                    <ItemSimulado fase='1' nivel='2' ano='2005' qC='15' ></ItemSimulado>
-                    <ItemSimulado fase='1' nivel='2' ano='2005' qC='15' ></ItemSimulado>
-                    <ItemSimulado fase='1' nivel='2' ano='2005' qC='15' ></ItemSimulado>
-                    <ItemSimulado fase='1' nivel='2' ano='2005' qC='15' ></ItemSimulado>
-                </ScrollView>
-            </View>
+            </View >
         );
     }
 }
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 1
+    },
     title: {
         width: 256,
         fontSize: 26,
@@ -49,14 +54,5 @@ const styles = StyleSheet.create({
         color: 'white',
     },
 })
-
-const actions = [
-    {
-        text: "Accessibility",
-        icon: require('../assets/logo_transparent.png'),
-        name: "bt_accessibility",
-        position: 2
-    }
-];
 
 export default Home;
