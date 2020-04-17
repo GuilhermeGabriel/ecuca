@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, Dimensions } from 'react-native'
+import ProgressBar from 'react-native-progress/Bar'
 
 class Simulado extends Component {
     static navigationOptions = {
@@ -13,7 +14,9 @@ class Simulado extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.title}>Simulado</Text>
+                <ProgressBar
+                    width={Dimensions.get('window').width}
+                    progress={12 / 20} />
             </View >
         );
     }
