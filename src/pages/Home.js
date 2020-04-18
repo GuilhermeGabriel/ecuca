@@ -25,6 +25,61 @@ class Home extends Component {
                                 this.props.navigation.navigate('Simulado')
                             }}>
                     </ItemSimulado>
+                    <ItemSimulado
+                        fase='1'
+                        nivel='2'
+                        ano='2005'
+                        qC='15'
+                        onPressItem={
+                            () => {
+                                this.props.navigation.navigate('Simulado')
+                            }}>
+                    </ItemSimulado><ItemSimulado
+                        fase='1'
+                        nivel='2'
+                        ano='2005'
+                        qC='15'
+                        onPressItem={
+                            () => {
+                                this.props.navigation.navigate('Simulado')
+                            }}>
+                    </ItemSimulado><ItemSimulado
+                        fase='1'
+                        nivel='2'
+                        ano='2005'
+                        qC='15'
+                        onPressItem={
+                            () => {
+                                this.props.navigation.navigate('Simulado')
+                            }}>
+                    </ItemSimulado><ItemSimulado
+                        fase='1'
+                        nivel='2'
+                        ano='2005'
+                        qC='15'
+                        onPressItem={
+                            () => {
+                                this.props.navigation.navigate('Simulado')
+                            }}>
+                    </ItemSimulado><ItemSimulado
+                        fase='1'
+                        nivel='2'
+                        ano='2005'
+                        qC='15'
+                        onPressItem={
+                            () => {
+                                this.props.navigation.navigate('Simulado')
+                            }}>
+                    </ItemSimulado><ItemSimulado
+                        fase='1'
+                        nivel='2'
+                        ano='2005'
+                        qC='15'
+                        onPressItem={
+                            () => {
+                                this.props.navigation.navigate('Simulado')
+                            }}>
+                    </ItemSimulado>
                 </ScrollView>
 
                 <FloatingAction

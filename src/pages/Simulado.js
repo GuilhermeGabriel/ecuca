@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { View, TouchableOpacity, Image, Text, StyleSheet, Dimensions, ScrollView } from 'react-native'
+
 import ProgressBar from 'react-native-progress/Bar'
 import ButtonsHeaderSimulado from '../Components/ButtonsHeaderSimulado'
 import ChoosesQuestionsSimulado from '../Components/ChoosesQuestionsSimulado'
 
 class Simulado extends Component {
     static navigationOptions = {
-        title: 'Nível 1 • 2º Fase • 2008',
+        title: 'N1 • F1 • 2008',
         headerLeft: null,
         headerTitleStyle: {
             fontWeight: 'bold'

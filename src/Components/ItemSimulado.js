@@ -20,11 +20,12 @@ class ItemSimulado extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        marginHorizontal: 20,
+        marginHorizontal: 16,
         marginVertical: 8,
         padding: 12,
         borderRadius: 4,
-        borderWidth: 1.5
+        borderWidth: 1.5,
+        borderColor: '#AAAAAA'
     },
     title: {
         fontSize: 18,

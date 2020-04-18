@@ -25,7 +25,13 @@ class ChoosesQuestionsSimulado extends Component {
 
     selectAlter(item) {
         let s = this.state;
-        s.selected = item
+
+        if (s.selected === item) {
+            s.selected = ''
+        } else {
+            s.selected = item
+        }
+
         this.setState(s);
     }
 
