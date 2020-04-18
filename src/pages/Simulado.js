@@ -1,6 +1,42 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Dimensions } from 'react-native'
+import { View, TouchableOpacity, Button, Text, StyleSheet, Dimensions } from 'react-native'
 import ProgressBar from 'react-native-progress/Bar'
+
+class ButtonsHeader extends Component {
+    constructor(props) {
+        super(props);
+
+        this.styles = StyleSheet.create({
+            container: {
+                flexDirection: 'row'
+            },
+            btn: {
+                padding: 4,
+                borderRadius: 4,
+                backgroundColor: 'black',
+                color: 'white',
+                fontSize: 14,
+                marginHorizontal: 12,
+            }
+        })
+    }
+
+    render() {
+        return (
+            <View style={this.styles.container}>
+                <TouchableOpacity >
+                    <Text style={this.styles.btn}>aa</Text>
+                </TouchableOpacity>
+                <TouchableOpacity >
+                    <Text style={this.styles.btn}>aa</Text>
+                </TouchableOpacity>
+                <TouchableOpacity >
+                    <Text style={this.styles.btn}>aa</Text>
+                </TouchableOpacity>
+            </View>
+        );
+    }
+}
 
 class Simulado extends Component {
     static navigationOptions = {
@@ -9,6 +45,7 @@ class Simulado extends Component {
         headerTitleStyle: {
             fontWeight: 'bold'
         },
+        headerRight: <ButtonsHeader></ButtonsHeader>,
     }
 
     render() {
