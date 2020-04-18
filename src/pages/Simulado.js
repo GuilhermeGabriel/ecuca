@@ -28,8 +28,8 @@ class Simulado extends Component {
                     progress={12 / 20} />
                 <ScrollView >
                     <Text style={styles.title}>Questão 5 de 20</Text>
-                    <Text style={styles.enunciado}>{this.frase}</Text>
                     <Image style={styles.img} source={require('../assets/img.jpg')}></Image>
+                    <Text style={styles.enunciado}>{this.frase}</Text>
                     <ChoosesQuestionsSimulado />
                 </ScrollView>
 
@@ -67,8 +67,8 @@ const styles = StyleSheet.create({
     img: {
         alignSelf: 'center',
         borderRadius: 4,
-        width: Dimensions.get('window').width - 24,
-        marginBottom: 20
+        width: Dimensions.get('window').width - 20,
+        marginBottom: 24
     },
     resp: {
         backgroundColor: 'black',
