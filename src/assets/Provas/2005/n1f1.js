@@ -3,7 +3,7 @@ export const n1f1 = {
         {
             answer: 'B',
             enun: 'Qual é o número obtido calculando 2005 - 205 + 25 - 2 ?',
-            img: '',
+            img: null,
             alter: [
                 '1 773',
                 '1 823',

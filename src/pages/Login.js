@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { GoogleSignin, GoogleSigninButton, statusCodes } from 'react-native-google-signin';
 import firebase from '../FirebaseConnection'
+import { StackActions, NavigationActions } from 'react-navigation'
 
 import { connect } from 'react-redux';
 import { editEmail, editPassword } from '../actions/AuthActions';
@@ -42,6 +43,14 @@ export class Login extends Component {
             this.setState({ userInfo: userInfo, loggedIn: true });
             const credential = firebase.auth.GoogleAuthProvider.credential(userInfo.idToken, userInfo.accessToken)
             await firebase.auth().signInWithCredential(credential);
+
+            const stackAction = StackActions.reset({
+                index: 0,
+                actions: [
+                    NavigationActions.navigate({ routeName: 'Home' })
+                ]
+            })
+            this.props.navigation.dispatch(stackAction);
         } catch (error) {
             if (error.code === statusCodes.SIGN_IN_CANCELLED) {
                 // user cancelled the login flow
@@ -85,14 +94,10 @@ export class Login extends Component {
         return (
             <View style={styles.container}>
                 <Text style={styles.title}>Bem-Vindo ao Ecuca</Text>
-                {this.state.loggedIn == true ? <Text>Logado</Text> : <Text>Deslogado</Text>}
+                {/*this.state.loggedIn == true ? <Text>Logado</Text> : <Text>Deslogado</Text>*/}
 
                 <TouchableOpacity style={styles.loginBtn} onPress={this.signIn}>
                     <Text style={styles.loginTxt}>Vamos lá</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={styles.loginBtn} onPress={this.signOut}>
-                    <Text style={styles.loginTxt}>Sair</Text>
                 </TouchableOpacity>
             </View >
         );

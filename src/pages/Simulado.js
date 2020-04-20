@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { View, TouchableOpacity, Text, Image, StyleSheet, Dimensions, ScrollView } from 'react-native'
-
 import ProgressBar from 'react-native-progress/Bar'
 import ChoosesQuestionsSimulado from '../Components/ChoosesQuestionsSimulado'
 import Icon from 'react-native-vector-icons/AntDesign';

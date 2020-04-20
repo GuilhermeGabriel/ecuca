@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text, FlatList, StyleSheet, ScrollView } from 'react-native'
+import { View, Text, FlatList, StyleSheet, ScrollView, } from 'react-native'
 import { FloatingAction } from "react-native-floating-action";
 import ItemSimulado from '../Components/ItemSimulado'
-
 
 class Home extends Component {
     static navigationOptions = {
@@ -13,7 +12,6 @@ class Home extends Component {
         return (
             <View style={styles.container}>
                 <Text style={styles.title}>Bons estudos, Guilherme</Text>
-
                 <ScrollView>
                     <ItemSimulado
                         fase='1'
@@ -28,61 +26,6 @@ class Home extends Component {
                                     ano: 2005,
                                     lastQuestion: 0
                                 })
-                            }}>
-                    </ItemSimulado>
-                    <ItemSimulado
-                        fase='1'
-                        nivel='2'
-                        ano='2005'
-                        qC='15'
-                        onPressItem={
-                            () => {
-                                this.props.navigation.navigate('Simulado')
-                            }}>
-                    </ItemSimulado><ItemSimulado
-                        fase='1'
-                        nivel='2'
-                        ano='2005'
-                        qC='15'
-                        onPressItem={
-                            () => {
-                                this.props.navigation.navigate('Simulado')
-                            }}>
-                    </ItemSimulado><ItemSimulado
-                        fase='1'
-                        nivel='2'
-                        ano='2005'
-                        qC='15'
-                        onPressItem={
-                            () => {
-                                this.props.navigation.navigate('Simulado')
-                            }}>
-                    </ItemSimulado><ItemSimulado
-                        fase='1'
-                        nivel='2'
-                        ano='2005'
-                        qC='15'
-                        onPressItem={
-                            () => {
-                                this.props.navigation.navigate('Simulado')
-                            }}>
-                    </ItemSimulado><ItemSimulado
-                        fase='1'
-                        nivel='2'
-                        ano='2005'
-                        qC='15'
-                        onPressItem={
-                            () => {
-                                this.props.navigation.navigate('Simulado')
-                            }}>
-                    </ItemSimulado><ItemSimulado
-                        fase='1'
-                        nivel='2'
-                        ano='2005'
-                        qC='15'
-                        onPressItem={
-                            () => {
-                                this.props.navigation.navigate('Simulado')
                             }}>
                     </ItemSimulado>
                 </ScrollView>
