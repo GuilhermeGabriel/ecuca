@@ -33,6 +33,7 @@ class ChoosesQuestionsSimulado extends Component {
         }
 
         this.setState(s);
+        this.props.onClick(this.props.actualQuestion, this.state.selected)
     }
 
     render() {
@@ -40,23 +41,23 @@ class ChoosesQuestionsSimulado extends Component {
             <View style={styles.container}>
                 <View style={styles.divisor} />
 
-                <ItemAlternativa selected={this.state.selected} alter='A' enun='Essa é top' onClick={() => this.selectAlter('A')}></ItemAlternativa>
+                <ItemAlternativa selected={this.state.selected} alter='A' enun={this.props.alternativas[0]} onClick={() => this.selectAlter('A')}></ItemAlternativa>
 
                 <View style={styles.divisor} />
 
-                <ItemAlternativa selected={this.state.selected} alter='B' enun='Essa é top' onClick={() => this.selectAlter('B')}></ItemAlternativa>
+                <ItemAlternativa selected={this.state.selected} alter='B' enun={this.props.alternativas[1]} onClick={() => this.selectAlter('B')}></ItemAlternativa>
 
                 <View style={styles.divisor} />
 
-                <ItemAlternativa selected={this.state.selected} alter='C' enun='Essa é top' onClick={() => this.selectAlter('C')}></ItemAlternativa>
+                <ItemAlternativa selected={this.state.selected} alter='C' enun={this.props.alternativas[2]} onClick={() => this.selectAlter('C')}></ItemAlternativa>
 
                 <View style={styles.divisor} />
 
-                <ItemAlternativa selected={this.state.selected} alter='D' enun='Essa é top' onClick={() => this.selectAlter('D')}></ItemAlternativa>
+                <ItemAlternativa selected={this.state.selected} alter='D' enun={this.props.alternativas[3]} onClick={() => this.selectAlter('D')}></ItemAlternativa>
 
                 <View style={styles.divisor} />
 
-                <ItemAlternativa selected={this.state.selected} alter='E' enun='Essa é top' onClick={() => this.selectAlter('E')}></ItemAlternativa>
+                <ItemAlternativa selected={this.state.selected} alter='E' enun={this.props.alternativas[4]} onClick={() => this.selectAlter('E')}></ItemAlternativa>
 
                 <View style={styles.divisor} />
 

@@ -22,7 +22,12 @@ class Home extends Component {
                         qC='15'
                         onPressItem={
                             () => {
-                                this.props.navigation.navigate('Simulado')
+                                this.props.navigation.navigate('Simulado', {
+                                    f: 1,
+                                    n: 1,
+                                    ano: 2005,
+                                    lastQuestion: 0
+                                })
                             }}>
                     </ItemSimulado>
                     <ItemSimulado
