@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-import { View, TouchableOpacity, Image, Text, StyleSheet, Dimensions, ScrollView } from 'react-native'
+import { View, TouchableOpacity, Text, Image, StyleSheet, Dimensions, ScrollView } from 'react-native'
 
 import ProgressBar from 'react-native-progress/Bar'
 import ChoosesQuestionsSimulado from '../Components/ChoosesQuestionsSimulado'
+import Icon from 'react-native-vector-icons/AntDesign';
+
 import { n1f1 } from '../assets/Provas/2005/n1f1'
 
 class Simulado extends Component {
     static navigationOptions = ({ navigation }) => {
         return {
-            title: ' Nível ' + navigation.state.params.n +
-                '• Fase ' + navigation.state.params.f +
+            title: ' N ' + navigation.state.params.n +
+                ' • F ' + navigation.state.params.f +
                 ' • ' + navigation.state.params.ano,
             headerLeft: null,
             headerTitleStyle: {
@@ -22,11 +24,7 @@ class Simulado extends Component {
     constructor(props) {
         super(props)
 
-        const params = this.props.navigation.state.params
-        const f = params.f
-        const n = params.n
-        const ano = params.ano
-        const lastQuestion = params.lastQuestion
+        const lastQuestion = this.props.navigation.state.params.lastQuestion
         this.prova = n1f1
 
         this.state = {
@@ -34,8 +32,7 @@ class Simulado extends Component {
             answers: [],
             enunc: this.prova.questions[lastQuestion].enun,
             alter: this.prova.questions[lastQuestion].alter,
-            imgQ: this.prova.questions[lastQuestion].img,
-            time: 10
+            imgQ: this.prova.questions[lastQuestion].img
         }
         this.selectedAnswerForQuestion = this.selectedAnswerForQuestion.bind(this)
         this.changeQuestion = this.changeQuestion.bind(this)
@@ -69,14 +66,22 @@ class Simulado extends Component {
                         <Text style={styles.time}>{this.state.time}</Text>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={() => { this.changeQuestion('back') }}>
-                        <Text style={styles.btn}>{'❮❮'}</Text>
+                        <Icon style={styles.btn} name="leftcircle" size={18} color="#000" />
                     </TouchableOpacity>
                     <TouchableOpacity onPress={() => { this.changeQuestion('next') }}>
-                        <Text style={styles.btn}>{'❯❯'}</Text>
+                        <Icon style={styles.btn} name="rightcircle" size={18} color="#000" />
                     </TouchableOpacity>
+                    <TouchableOpacity onPress={() => { this.finish() }}>
+                        <Icon style={styles.btn} name="checkcircle" size={18} color="#000" />
+                    </TouchableOpacity>
+                    <Text>{this.props.navigation.state.params.timee}</Text>
                 </View >
             )
         })
+    }
+
+    finish() {
+
     }
 
     selectedAnswerForQuestion(question, answer) {
@@ -89,6 +94,8 @@ class Simulado extends Component {
         return (
             <View style={styles.container}>
                 <ProgressBar
+                    height={8}
+                    borderWidth={0}
                     borderRadius={0}
                     width={Dimensions.get('window').width}
                     progress={(this.state.actualQuestion + 1) / 20} />
@@ -103,9 +110,14 @@ class Simulado extends Component {
                         onClick={this.selectedAnswerForQuestion} />
                 </ScrollView>
 
-                <TouchableOpacity>
-                    <Text style={styles.resp}>RESPONDER</Text>
-                </TouchableOpacity>
+
+                {
+                    (this.state.answers[this.state.actualQuestion] != undefined &&
+                        this.state.answers[this.state.actualQuestion] != '') &&
+                    <TouchableOpacity>
+                        <Text style={styles.resp}>{(this.state.actualQuestion != 19) ? 'RESPONDER' : 'ENTREGAR SIMULADO'}</Text>
+                    </TouchableOpacity>
+                }
             </View >
         );
     }
@@ -135,9 +147,9 @@ const styles = StyleSheet.create({
         marginBottom: 12
     },
     img: {
+        width: Dimensions.get('window').width - 20,
         alignSelf: 'center',
         borderRadius: 4,
-        width: Dimensions.get('window').width - 20,
         marginBottom: 12
     },
     resp: {
@@ -154,16 +166,16 @@ const styles = StyleSheet.create({
     },
     btn: {
         fontWeight: 'bold',
-        paddingVertical: 4,
+        paddingVertical: 12,
         paddingHorizontal: 12,
         borderRadius: 4,
         color: 'black',
-        fontSize: 20,
+        fontSize: 22,
         marginHorizontal: 2,
     },
     time: {
         fontWeight: 'bold',
-        paddingVertical: 8,
+        paddingVertical: 12,
         paddingHorizontal: 4,
         borderRadius: 4,
         color: 'black',

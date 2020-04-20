@@ -3,7 +3,7 @@ export const n1f1 = {
         {
             answer: 'B',
             enun: 'Qual é o número obtido calculando 2005 - 205 + 25 - 2 ?',
-            img: null,
+            img: '',
             alter: [
                 '1 773',
                 '1 823',
@@ -231,7 +231,7 @@ export const n1f1 = {
         {
             answer: 'A',
             enun: 'O aniversário de Carlinhos é no dia 20 de julho. Em agosto de 2005, ao preencher uma ficha em sua escola, Carlinhos inverteu a posição dos dois últimos algarismos do ano em que nasceu. A professora que recebeu a ficha disse: – Carlinhos, por favor, corrija o ano de seu nascimento, senão as pessoas vão pensar que você tem 56 anos ! Qual é a idade de Carlinhos?',
-            img: '',
+            img: null,
             alter: [
                 '1 asdf',
                 '1 8sdff23',
