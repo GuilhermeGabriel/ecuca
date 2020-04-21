@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, FlatList, Picker, TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet, FlatList, Picker, TouchableOpacity, Dimensions } from 'react-native'
 import { FloatingAction } from "react-native-floating-action";
 import ItemSimulado from '../Components/ItemSimulado'
 import { Dialog } from 'react-native-simple-dialogs';
@@ -20,6 +20,7 @@ class Home extends Component {
             dialogVisible: false,
             dialogInputAno: '',
             dialogInputNivel: '',
+            loadSimuladosFirstTime: false,
             simulados: []
         }
 
@@ -44,7 +45,7 @@ class Home extends Component {
                 }
 
             })
-            this.setState({ simulados: [...sim, ...this.state.simulados,] })
+            this.setState({ simulados: [...sim, ...this.state.simulados,], loadSimuladosFirstTime: true })
         });
     }
 
@@ -66,6 +67,12 @@ class Home extends Component {
         return (
             <View style={styles.container}>
                 <Text style={styles.title}>Bons estudos,{"\n"}{this.state.name}</Text>
+
+                {(this.state.simulados.length === 0 && this.state.loadSimuladosFirstTime) &&
+                    <View>
+                        <Text style={styles.alertSimu}>Você ainda não adicionou nenhum simulado!</Text>
+                    </View>
+                }
 
                 <Dialog
                     animationType='fade'
@@ -180,6 +187,14 @@ const styles = StyleSheet.create({
         fontSize: 26,
         fontWeight: 'bold',
         margin: 20
+    },
+    alertSimu: {
+        textAlignVertical: 'center',
+        height: Dimensions.get('window').height - 150,
+        fontWeight: 'bold',
+        marginHorizontal: 64,
+        textAlign: 'center',
+        fontSize: 28
     },
     actionButtonIcon: {
         fontSize: 20,

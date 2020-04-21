@@ -5,7 +5,10 @@ const ItemAlternativa = (props) => {
     return (
         <TouchableOpacity onPress={props.onClick}>
             <View style={styles.containerAlter}>
-                <Text style={(props.selected == props.alter) ? styles.selected : styles.select}>{props.alter}</Text>
+                <Text style={(props.selected == props.alter) ?
+                    styles.selected :
+                    styles.select}>{props.alter}
+                </Text>
                 <Text style={styles.selectText}>{props.enun}</Text>
             </View>
         </TouchableOpacity>

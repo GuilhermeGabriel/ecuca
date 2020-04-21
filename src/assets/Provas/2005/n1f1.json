@@ -1,0 +1,28 @@
+{
+    "questions": [
+        {
+            "answer": "B",
+            "enun": "Qual é o número obtido calculando 2005 - 205 + 25 - 2 ?",
+            "img": null,
+            "alter": [
+                "1 773",
+                "1 823",
+                "1 827",
+                "1 873",
+                "2 237"
+            ]
+        },
+        {
+            "answer": "B",
+            "enun": "Guilherme está medindo o comprimento de um selo comum pedaço de uma régua, graduada em centímetros, como mostra a figura.Qual é o comprimento do selo ? ",
+            "img": "./n1f1imgs/2.png",
+            "alter": [
+                "3 cm",
+                "3,4 cm",
+                "3,6 cm",
+                "4 cm",
+                "4,4 cm"
+            ]
+        }
+    ]
+}

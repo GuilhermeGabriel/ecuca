@@ -23,8 +23,15 @@ class Simulado extends Component {
     constructor(props) {
         super(props)
 
-        const lastQuestion = this.props.navigation.state.params.lQ
+        const fase = this.props.navigation.state.params.f
+        const nivel = this.props.navigation.state.params.n
+        const ano = this.props.navigation.state.params.ano
+
+        //const path = `../assets/Provas/${ano}/n${nivel}f${fase}.json`
+        //const customData = require('../assets/Provas/2005/n1f1.json');
+
         this.prova = n1f1
+        const lastQuestion = this.props.navigation.state.params.lQ
 
         this.state = {
             actualQuestion: lastQuestion,
