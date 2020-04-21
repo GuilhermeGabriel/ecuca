@@ -11,7 +11,7 @@ class ItemSimulado extends Component {
         return (
             <TouchableOpacity style={styles.container} onPress={this.props.onPressItem}>
                 <Text style={styles.title}>{this.props.fase} º Fase • Nível {this.props.nivel} • {this.props.ano}</Text>
-                <Text style={styles.title}>7/20 Concluídas </Text>
+                <Text style={styles.title}>{this.props.qC}/20 Concluídas </Text>
                 <ProgressBar progress={this.props.qC / 20} width={190} style={styles.progress} />
             </TouchableOpacity>
         );

@@ -9,8 +9,8 @@ import { n1f1 } from '../assets/Provas/2005/n1f1'
 class Simulado extends Component {
     static navigationOptions = ({ navigation }) => {
         return {
-            title: ' N ' + navigation.state.params.n +
-                ' • F ' + navigation.state.params.f +
+            title: ' F ' + navigation.state.params.f +
+                ' • N ' + navigation.state.params.n +
                 ' • ' + navigation.state.params.ano,
             headerLeft: null,
             headerTitleStyle: {
@@ -23,7 +23,7 @@ class Simulado extends Component {
     constructor(props) {
         super(props)
 
-        const lastQuestion = this.props.navigation.state.params.lastQuestion
+        const lastQuestion = this.props.navigation.state.params.lQ
         this.prova = n1f1
 
         this.state = {

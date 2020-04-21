@@ -49,7 +49,7 @@ export class Login extends Component {
             this.setState({ userInfo: userInfo, loggedIn: true });
             const credential = firebase.auth.GoogleAuthProvider.credential(userInfo.idToken);
             const user = await firebase.auth().signInWithCredential(credential)
-            await Sistema.createNewUser(user.user.uid, userInfo.user.givenName, userInfo.user.email, userInfo.user.photo)
+            await Sistema.createNewUser(user.user.uid, userInfo.user.name, userInfo.user.email, userInfo.user.photo)
 
             const stackAction = StackActions.reset({
                 index: 0,

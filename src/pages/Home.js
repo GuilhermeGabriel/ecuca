@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ScrollView, Picker, TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet, FlatList, Picker, TouchableOpacity } from 'react-native'
 import { FloatingAction } from "react-native-floating-action";
 import ItemSimulado from '../Components/ItemSimulado'
 import { Dialog } from 'react-native-simple-dialogs';
@@ -16,23 +16,47 @@ class Home extends Component {
         super(props)
         this.state = {
             uid: '',
+            name: 'Usuário',
             dialogVisible: false,
             dialogInputAno: '',
-            dialogInputNivel: ''
+            dialogInputNivel: '',
+            simulados: []
         }
 
         firebase.auth().onAuthStateChanged(user => {
-            this.setState({ uid: user.uid })
+            this.setState({ name: user.displayName.split(' ')[0], uid: user.uid })
+            this.loadSimulados(user.uid);
         })
+
+        console.disableYellowBox = true;
     }
 
-    addNewSimulado() {
+    loadSimulados(uid) {
+        Sistema.loadAllSimulados(uid, snapShot => {
+            let sim = []
+            snapShot.docChanges().forEach(change => {
+                if (change.type == 'added') {
+                    sim.push(change.doc.data())
+                }
+
+                if (change.type == 'modified') {
+                    change.doc.data()
+                }
+
+            })
+            this.setState({ simulados: [...sim, ...this.state.simulados,] })
+        });
+    }
+
+    async addNewSimulado() {
         const uid = this.state.uid
         const ano = this.state.dialogInputAno
         const nivel = this.state.dialogInputNivel
 
         if (uid != '' && nivel != '' && ano != '') {
-            Sistema.addNewSimuladoToUser(uid, nivel, ano);
+            await Sistema.addNewSimuladoToUser(uid, nivel, ano);
+            this.setState({ dialogVisible: false })
+            this.floatingAction.animateButton();
         } else {
             Toast.show('Os valores não devem ser vazios!', Toast.LONG);
         }
@@ -41,7 +65,7 @@ class Home extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.title}>Bons estudos, Guilherme</Text>
+                <Text style={styles.title}>Bons estudos,{"\n"}{this.state.name}</Text>
 
                 <Dialog
                     animationType='fade'
@@ -113,23 +137,27 @@ class Home extends Component {
                     </View>
                 </Dialog>
 
-                <ScrollView>
-                    <ItemSimulado
-                        fase='1'
-                        nivel='2'
-                        ano='2005'
-                        qC='15'
-                        onPressItem={
-                            () => {
-                                this.props.navigation.navigate('Simulado', {
-                                    f: 1,
-                                    n: 1,
-                                    ano: 2005,
-                                    lastQuestion: 0
-                                })
-                            }}>
-                    </ItemSimulado>
-                </ScrollView>
+                <FlatList
+                    keyExtractor={(item, index) => { { 'n' } { item.nivel } { 'f' } { item.fase } item.ano }}
+                    data={this.state.simulados}
+                    renderItem={({ item, index }) => (
+                        <ItemSimulado
+                            fase={item.fase}
+                            nivel={item.nivel}
+                            ano={item.ano}
+                            qC={item.qC}
+                            onPressItem={
+                                () => {
+                                    this.props.navigation.navigate('Simulado', {
+                                        f: item.fase,
+                                        n: item.nivel,
+                                        ano: item.ano,
+                                        lQ: item.lQ
+                                    })
+                                }}>
+                        </ItemSimulado>
+                    )}>
+                </FlatList>
 
                 <FloatingAction
                     ref={(ref) => { this.floatingAction = ref; }}
