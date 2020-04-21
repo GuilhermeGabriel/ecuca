@@ -4,6 +4,7 @@ import { FloatingAction } from "react-native-floating-action";
 import ItemSimulado from '../Components/ItemSimulado'
 import { Dialog } from 'react-native-simple-dialogs';
 import Toast from 'react-native-simple-toast';
+import firebase from '../FirebaseConnection'
 import Sistema from '../Sistema'
 
 class Home extends Component {
@@ -14,18 +15,24 @@ class Home extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            uid: '',
             dialogVisible: false,
             dialogInputAno: '',
             dialogInputNivel: ''
         }
+
+        firebase.auth().onAuthStateChanged(user => {
+            this.setState({ uid: user.uid })
+        })
     }
 
     addNewSimulado() {
+        const uid = this.state.uid
         const ano = this.state.dialogInputAno
         const nivel = this.state.dialogInputNivel
 
-        if (ano != '' && nivel != '') {
-            Sistema.addNewSimuladoToUser(nivel, ano);
+        if (uid != '' && nivel != '' && ano != '') {
+            Sistema.addNewSimuladoToUser(uid, nivel, ano);
         } else {
             Toast.show('Os valores não devem ser vazios!', Toast.LONG);
         }
@@ -127,7 +134,7 @@ class Home extends Component {
                 <FloatingAction
                     ref={(ref) => { this.floatingAction = ref; }}
                     onOpen={() => this.setState({ dialogVisible: true })}
-                    overlayColor={0}
+                    overlayColor={'0'}
                     actions={[]}
                     onPressItem={() => this.setState({ dialogVisible: true })}
                 />
