@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { GoogleSignin } from 'react-native-google-signin';
 import { StackActions, NavigationActions } from 'react-navigation'
+import { GoogleSignin } from '@react-native-community/google-signin';
 
 export default class Preload extends Component {
     static navigationOptions = {

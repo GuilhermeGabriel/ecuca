@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { GoogleSignin, GoogleSigninButton, statusCodes } from 'react-native-google-signin';
-import firebase from '../FirebaseConnection'
+import firebase from '../FirebaseConnection';
+import {
+    GoogleSignin,
+    GoogleSigninButton,
+    statusCodes,
+} from '@react-native-community/google-signin';
+
+import Sistema from '../Sistema'
 import { StackActions, NavigationActions } from 'react-navigation'
 
 import { connect } from 'react-redux';
 import { editEmail, editPassword } from '../actions/AuthActions';
+
 
 export class Login extends Component {
     static navigationOptions = {
@@ -41,8 +48,10 @@ export class Login extends Component {
             await GoogleSignin.hasPlayServices();
             const userInfo = await GoogleSignin.signIn();
             this.setState({ userInfo: userInfo, loggedIn: true });
-            const credential = firebase.auth.GoogleAuthProvider.credential(userInfo.idToken, userInfo.accessToken)
-            await firebase.auth().signInWithCredential(credential);
+            const credential = firebase.auth.GoogleAuthProvider.credential(userInfo.idToken);
+            await firebase.auth().signInWithCredential(credential)
+
+            //Sistema.createNewUser(userInfo.user.id, userInfo.user.givenName + userInfo.user.email + userInfo.user.photo)
 
             const stackAction = StackActions.reset({
                 index: 0,
@@ -51,6 +60,7 @@ export class Login extends Component {
                 ]
             })
             this.props.navigation.dispatch(stackAction);
+
         } catch (error) {
             if (error.code === statusCodes.SIGN_IN_CANCELLED) {
                 // user cancelled the login flow
