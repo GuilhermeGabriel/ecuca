@@ -5,6 +5,7 @@ import ChoosesQuestionsSimulado from '../Components/ChoosesQuestionsSimulado'
 import Icon from 'react-native-vector-icons/AntDesign';
 
 import { n1f1 } from '../assets/Provas/2005/n1f1'
+import Sistema from '../Sistema';
 
 class Simulado extends Component {
     static navigationOptions = ({ navigation }) => {
@@ -32,16 +33,33 @@ class Simulado extends Component {
 
         this.prova = n1f1
         const lastQuestion = this.props.navigation.state.params.lQ
+        const cA = [];
+        n1f1.questions.forEach(element => {
+            cA.push(element.answer)
+        });
 
         this.state = {
             actualQuestion: lastQuestion,
-            answers: [],
+            selecteds: [],
+            selectedsFromDb: [],
+            correctAnswers: cA,
             enunc: this.prova.questions[lastQuestion].enun,
             alter: this.prova.questions[lastQuestion].alter,
             imgQ: this.prova.questions[lastQuestion].img
         }
         this.selectedAnswerForQuestion = this.selectedAnswerForQuestion.bind(this)
         this.changeQuestion = this.changeQuestion.bind(this)
+        this.markAndShowAnswer = this.markAndShowAnswer.bind(this)
+
+        Sistema.getDataSimulado(this.props.navigation.state.params.uid, this.props.navigation.state.params.id, snapShot => {
+            let markedInDb = []
+            for (let i = 0; i < 20; i++) {
+                if (snapShot.data().selectedAnswers != null) {
+                    markedInDb.push(snapShot.data().selectedAnswers[i]);
+                }
+            }
+            this.setState({ selectedsFromDb: markedInDb })
+        })
     }
 
     changeQuestion(action) {
@@ -86,13 +104,21 @@ class Simulado extends Component {
         })
     }
 
+    async markAndShowAnswer() {
+        const uid = this.props.navigation.state.params.uid
+        const actualProva = this.props.navigation.state.params.id
+        const question = this.state.actualQuestion
+        const actualSelected = this.state.selecteds[this.state.actualQuestion]
+        await Sistema.markAndShowAnswer(uid, actualProva, question, actualSelected)
+    }
+
     finish() {
 
     }
 
     selectedAnswerForQuestion(question, answer) {
         let s = this.state;
-        s.answers[question] = answer;
+        s.selecteds[question] = answer;
         this.setState(s);
     }
 
@@ -110,18 +136,21 @@ class Simulado extends Component {
                     <Image resizeMode='contain' style={styles.img} source={this.state.imgQ}></Image>
                     <Text style={styles.enunciado}>{this.state.enunc}</Text>
                     <ChoosesQuestionsSimulado
+                        isPremium={true}
+                        showAnswer={this.state.selectedsFromDb[this.state.actualQuestion] != undefined}
+                        ableToSelectNewQuestion={this.state.selectedsFromDb[this.state.actualQuestion] != undefined}
                         alternativas={this.state.alter}
                         actualQuestion={this.state.actualQuestion}
-                        actualAnswer={this.state.answers[this.state.actualQuestion]}
+                        actualSelected={this.state.selecteds[this.state.actualQuestion]}
+                        actualAnswer={this.state.correctAnswers[this.state.actualQuestion]}
                         onClick={this.selectedAnswerForQuestion} />
                 </ScrollView>
 
-
                 {
-                    (this.state.answers[this.state.actualQuestion] != undefined &&
-                        this.state.answers[this.state.actualQuestion] != '') &&
-                    <TouchableOpacity>
-                        <Text style={styles.resp}>{(this.state.actualQuestion != 19) ? 'RESPONDER' : 'ENTREGAR SIMULADO'}</Text>
+                    (this.state.selecteds[this.state.actualQuestion] != undefined &&
+                        this.state.selecteds[this.state.actualQuestion] != '') &&
+                    <TouchableOpacity onPress={this.markAndShowAnswer}>
+                        <Text style={styles.resp}>VER RESPOSTA</Text>
                     </TouchableOpacity>
                 }
             </View >

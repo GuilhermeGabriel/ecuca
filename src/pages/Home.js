@@ -45,7 +45,10 @@ class Home extends Component {
                 }
 
             })
-            this.setState({ simulados: [...sim, ...this.state.simulados,], loadSimuladosFirstTime: true })
+            this.setState({
+                simulados: [...sim, ...this.state.simulados,],
+                loadSimuladosFirstTime: true
+            })
         });
     }
 
@@ -156,6 +159,8 @@ class Home extends Component {
                             onPressItem={
                                 () => {
                                     this.props.navigation.navigate('Simulado', {
+                                        uid: this.state.uid,
+                                        id: item.id,
                                         f: item.fase,
                                         n: item.nivel,
                                         ano: item.ano,

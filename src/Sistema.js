@@ -33,13 +33,14 @@ class FirebaseSistema {
                 .collection('users')
                 .doc(uid)
                 .collection('simulados')
-                .doc('n' + nivel + 'f1' + ano)
+                .doc('f1' + 'n' + nivel + ano)
                 .set({
+                    id: 'f1' + 'n' + nivel + ano,
                     nivel: nivel,
                     ano: ano,
                     fase: 1,
                     lQ: 0,
-                    qC: 0
+                    qC: 0,
                 })
         } else {
             Toast.show('Você já adicionou esse simulado!', Toast.LONG);
@@ -52,18 +53,24 @@ class FirebaseSistema {
             .doc(uid)
             .collection('simulados')
             .onSnapshot(onSnap)
+    }
 
-        /*
-        .get()
-        .then(querySnapshots => {
-            let sim = []
+    getDataSimulado(uid, idProva, onSnap) {
+        firestore()
+            .collection('users')
+            .doc(uid)
+            .collection('simulados')
+            .doc(idProva)
+            .onSnapshot(onSnap)
+    }
 
-            querySnapshots.forEach(document => {
-                sim.push(document.data())
-            });
-
-            return sim
-        })*/
+    markAndShowAnswer(uid, idProva, question, answer) {
+        return firestore()
+            .collection('users')
+            .doc(uid)
+            .collection('simulados')
+            .doc(idProva)
+            .update('selectedAnswers.' + question, answer)
     }
 }
 
