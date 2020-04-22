@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, FlatList, Picker, TouchableOpacity, Dimensions } from 'react-native'
+import { View, Text, StyleSheet, FlatList, Picker, TouchableOpacity, Dimensions, ActivityIndicator } from 'react-native'
 import { FloatingAction } from "react-native-floating-action";
 import ItemSimulado from '../Components/ItemSimulado'
 import { Dialog } from 'react-native-simple-dialogs';
@@ -16,7 +16,7 @@ class Home extends Component {
         super(props)
         this.state = {
             uid: '',
-            name: 'Usuário',
+            name: this.props.navigation.state.params.name,
             dialogVisible: false,
             dialogInputAno: '',
             dialogInputNivel: '',
@@ -36,13 +36,25 @@ class Home extends Component {
         Sistema.loadAllSimulados(uid, snapShot => {
             let sim = []
             snapShot.docChanges().forEach(change => {
+                let qC = 0
+                for (let i in change.doc.data().selectedAnswers) { qC++ }
+
                 if (change.type == 'added') {
                     sim.push(change.doc.data())
+                    sim[sim.length - 1].qC = qC
                 }
 
-                if (change.type == 'modified') {
-                    change.doc.data()
-                }
+
+                /* if (change.type == 'modified') {
+                     for (ss of this.state.simulados) {
+                         if (ss.id === change.doc.data().id) {
+                             const sSim = this.state.simulados
+                             const index = sSim.indexOf(ss)
+                             sSim[index] = change.doc.data()
+                             this.setState({ simulados: sSim })
+                         }
+                     }
+                 }*/
 
             })
             this.setState({
@@ -75,6 +87,10 @@ class Home extends Component {
                     <View>
                         <Text style={styles.alertSimu}>Você ainda não adicionou nenhum simulado!</Text>
                     </View>
+                }
+
+                {(this.state.simulados.length === 0) &&
+                    <ActivityIndicator style={styles.alertSimu} size="large" color="#0000ff" />
                 }
 
                 <Dialog

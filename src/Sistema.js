@@ -40,7 +40,6 @@ class FirebaseSistema {
                     ano: ano,
                     fase: 1,
                     lQ: 0,
-                    qC: 0,
                 })
         } else {
             Toast.show('Você já adicionou esse simulado!', Toast.LONG);

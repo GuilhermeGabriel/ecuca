@@ -141,7 +141,10 @@ class Simulado extends Component {
                         ableToSelectNewQuestion={this.state.selectedsFromDb[this.state.actualQuestion] != undefined}
                         alternativas={this.state.alter}
                         actualQuestion={this.state.actualQuestion}
-                        actualSelected={this.state.selecteds[this.state.actualQuestion]}
+                        actualSelected={(this.state.selectedsFromDb[this.state.actualQuestion] != undefined) ?
+                            this.state.selectedsFromDb[this.state.actualQuestion] :
+                            this.state.selecteds[this.state.actualQuestion]
+                        }
                         actualAnswer={this.state.correctAnswers[this.state.actualQuestion]}
                         onClick={this.selectedAnswerForQuestion} />
                 </ScrollView>
