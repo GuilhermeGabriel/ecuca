@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, TouchableOpacity, Text, StyleSheet } from 'react-native'
+import Icon from 'react-native-vector-icons/AntDesign';
 
 class ItemAlternativa extends Component {
     constructor(props) {
@@ -35,6 +36,29 @@ class ItemAlternativa extends Component {
                     <Text style={styles.selectText}>{this.props.enun}</Text>
                 </View>
             </TouchableOpacity>
+        )
+    }
+}
+
+Resolucao = (props) => {
+    if (!props.showResolutionView) return <View></View>
+    if (props.isPremium) {
+        return (
+            <View>
+                <Text style={styles.titleResolucao}>Resolução:</Text>
+                <Text style={{ fontSize: 18, marginTop: 16 }}>sdffsdffsdffddsdffdsdffdsdffdsdffdsdffsdffddsdffdsdffdsdffdsdffdsdffsdffddsdffdsdffdsdffdsdffdsdffsdffddsdffdsdffdsdffdsdffdsdffsdffdsdffsdffsdffddsdffdsdffdsdffdsdffdsdffsdffddsdffdsdffdsdffdsdffdsdffsdffddsdffdsdffdsdffdsdffdsdffsdffddsdffdsdffdsdffdsdffdsdffsdffddsdffdsdffdsdffdsdffdsdffddsdffdsdffdsdffdsdffddsdffdsdffdsdffdsdffdsdffddsdffdsdffdsdffdsdffd</Text>
+            </View>
+        )
+    } else {
+        return (
+            <View style={{ height: 400 }}>
+                <Text style={styles.titleResolucao}>Resolução:</Text>
+                <Icon style={{ alignSelf: 'center', marginTop: 50 }} name="lock1" size={48} color="darkorange" />
+                <Text style={{ alignSelf: 'center', margin: 12, fontSize: 16, textAlign: 'center' }}> Resolução da questão bloqueada,{"\n"} atualize para Ecuca Pro para ter a resolução detalhada.</Text>
+                <TouchableOpacity>
+                    <Text style={{ alignSelf: 'center', textAlign: 'center', fontWeight: 'bold', fontSize: 16, backgroundColor: 'green', borderRadius: 8, color: 'white', padding: 16 }}>Desbloquear Ecuca Pro</Text>
+                </TouchableOpacity>
+            </View>
         )
     }
 }
@@ -123,16 +147,10 @@ class ChoosesQuestionsSimulado extends Component {
 
                 <View style={styles.divisor} />
 
-                {this.props.isPremium &&
-                    <View>
-                        <Text style={styles.titleResolucao}>Resolução</Text>
-
-                        <Text style={{ fontSize: 18 }}>{'\n'}1. (alternativa B) {"\n\n"}
-                    A expressão contém apenas adições e subtrações, por isso podemos efetuar essas operações em qualquer ordem. A escolha
-                    sobre qual a melhor ordem é apenas uma questão de conveniência. Por exemplo, podemos efetuar primeiro as subtrações,
-escrevendo 2005 - 205 + 25 - 2 = (2005 - 205) + (25 - 2) = 1800 + 23 = 1823 .</Text>
-                    </View>
-                }
+                <Resolucao
+                    isPremium={this.props.isPremium}
+                    showResolutionView={this.props.ableToSelectNewQuestion}>
+                </Resolucao>
             </View>
         );
     }

@@ -136,7 +136,7 @@ class Simulado extends Component {
                     <Image resizeMode='contain' style={styles.img} source={this.state.imgQ}></Image>
                     <Text style={styles.enunciado}>{this.state.enunc}</Text>
                     <ChoosesQuestionsSimulado
-                        isPremium={true}
+                        isPremium={false}
                         showAnswer={this.state.selectedsFromDb[this.state.actualQuestion] != undefined}
                         ableToSelectNewQuestion={this.state.selectedsFromDb[this.state.actualQuestion] != undefined}
                         alternativas={this.state.alter}
