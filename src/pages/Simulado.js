@@ -51,7 +51,7 @@ class Simulado extends Component {
         this.changeQuestion = this.changeQuestion.bind(this)
         this.markAndShowAnswer = this.markAndShowAnswer.bind(this)
 
-        Sistema.getDataSimulado(this.props.navigation.state.params.uid, this.props.navigation.state.params.id, snapShot => {
+        this.dataSimuladoListnerUn = Sistema.getDataSimulado(this.props.navigation.state.params.uid, this.props.navigation.state.params.id, snapShot => {
             let markedInDb = []
             for (let i = 0; i < 20; i++) {
                 if (snapShot.data().selectedAnswers != null) {
@@ -60,6 +60,14 @@ class Simulado extends Component {
             }
             this.setState({ selectedsFromDb: markedInDb })
         })
+
+        this.addListenerToUserUn = Sistema.addListenerToUser(this.props.navigation.state.params.uid, onSnapshot => {
+            if (onSnapshot.data().isPremium == true) {
+                this.setState({ isPremium: true })
+            } else {
+                this.setState({ isPremium: false })
+            }
+        });
     }
 
     changeQuestion(action) {
@@ -80,6 +88,11 @@ class Simulado extends Component {
                 imgQ: this.prova.questions[this.state.actualQuestion - 1].img,
             });
         }
+    }
+
+    componentWillUnmount() {
+        this.dataSimuladoListnerUn()
+        this.addListenerToUserUn()
     }
 
     componentDidMount() {
@@ -136,8 +149,7 @@ class Simulado extends Component {
                     <Image resizeMode='contain' style={styles.img} source={this.state.imgQ}></Image>
                     <Text style={styles.enunciado}>{this.state.enunc}</Text>
                     <ChoosesQuestionsSimulado
-                        navigation={this.props.navigation}
-                        isPremium={false}
+                        isPremium={this.state.isPremium}
                         showAnswer={this.state.selectedsFromDb[this.state.actualQuestion] != undefined}
                         ableToSelectNewQuestion={this.state.selectedsFromDb[this.state.actualQuestion] != undefined}
                         alternativas={this.state.alter}

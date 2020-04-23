@@ -56,7 +56,7 @@ Resolucao = (props) => {
                 <Text style={styles.titleResolucao}>Resolução:</Text>
                 <Icon style={{ alignSelf: 'center', marginTop: 50 }} name="lock1" size={48} color="darkorange" />
                 <Text style={{ alignSelf: 'center', margin: 12, fontSize: 16, textAlign: 'center' }}> Resolução da questão bloqueada,{"\n"} atualize para Ecuca Pro para ter a resolução detalhada.</Text>
-                <TouchableOpacity onPress={() => { props.navigation.navigate('Payments') }}>
+                <TouchableOpacity onPress={() => { InAppSistema.getProducts() }}>
                     <Text style={{ alignSelf: 'center', textAlign: 'center', fontWeight: 'bold', fontSize: 16, backgroundColor: 'green', borderRadius: 8, color: 'white', padding: 16 }}>Desbloquear Ecuca Pro</Text>
                 </TouchableOpacity>
             </View>
@@ -149,7 +149,6 @@ class ChoosesQuestionsSimulado extends Component {
                 <View style={styles.divisor} />
 
                 <Resolucao
-                    navigation={this.props.navigation}
                     isPremium={this.props.isPremium}
                     showResolutionView={this.props.ableToSelectNewQuestion}>
                 </Resolucao>

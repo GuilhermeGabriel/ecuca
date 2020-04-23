@@ -46,6 +46,13 @@ class FirebaseSistema {
         }
     }
 
+    addListenerToUser(uid, onSnapshot) {
+        return firestore()
+            .collection('users')
+            .doc(uid)
+            .onSnapshot(onSnapshot);
+    }
+
     loadAllSimulados(uid, onSnap) {
         firestore()
             .collection('users')
@@ -55,7 +62,7 @@ class FirebaseSistema {
     }
 
     getDataSimulado(uid, idProva, onSnap) {
-        firestore()
+        return firestore()
             .collection('users')
             .doc(uid)
             .collection('simulados')
