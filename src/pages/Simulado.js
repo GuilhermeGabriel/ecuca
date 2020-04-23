@@ -113,7 +113,7 @@ class Simulado extends Component {
     }
 
     finish() {
-
+        this.props.navigation.goBack()
     }
 
     selectedAnswerForQuestion(question, answer) {
@@ -136,6 +136,7 @@ class Simulado extends Component {
                     <Image resizeMode='contain' style={styles.img} source={this.state.imgQ}></Image>
                     <Text style={styles.enunciado}>{this.state.enunc}</Text>
                     <ChoosesQuestionsSimulado
+                        navigation={this.props.navigation}
                         isPremium={false}
                         showAnswer={this.state.selectedsFromDb[this.state.actualQuestion] != undefined}
                         ableToSelectNewQuestion={this.state.selectedsFromDb[this.state.actualQuestion] != undefined}

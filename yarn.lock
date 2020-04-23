@@ -2033,6 +2033,11 @@ dom-storage@2.1.0:
   resolved "https://registry.yarnpkg.com/dom-storage/-/dom-storage-2.1.0.tgz#00fb868bc9201357ea243c7bcfd3304c1e34ea39"
   integrity sha512-g6RpyWXzl0RR6OTElHKBl7nwnK87GUyZMYC7JWsB/IA73vpqK2K6LT39x4VepLxlSsWBFrPVLnsSR5Jyty0+2Q==
 
+dooboolab-welcome@^1.1.1:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/dooboolab-welcome/-/dooboolab-welcome-1.2.0.tgz#295818ce85a8e97dc90c0ec0510b4008e2d722dc"
+  integrity sha512-XgEbjJHAsKLge/e8jtuHsv84Ovg1Gx0GvnOTOmOlVGV1643nduTAkT3fyo/mxKbzvyXBr47RHaJAY4R2toI0UA==
+
 ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
@@ -3924,6 +3929,13 @@ react-native-gesture-handler@^1.6.1:
     hoist-non-react-statics "^2.3.1"
     invariant "^2.2.4"
     prop-types "^15.7.2"
+
+react-native-iap@^4.4.7:
+  version "4.4.7"
+  resolved "https://registry.yarnpkg.com/react-native-iap/-/react-native-iap-4.4.7.tgz#9872803b5a2e50bc8e86161191f8ca2c59485324"
+  integrity sha512-7d1cYDqWIHS1IKIomV3dU5nq2lyGLJMq+afebZe5F3okPpY8LBLukMGnnBBiB4tdgEGUS0z4aQ9pgttfcAB3Ug==
+  dependencies:
+    dooboolab-welcome "^1.1.1"
 
 react-native-progress@^4.1.2:
   version "4.1.2"

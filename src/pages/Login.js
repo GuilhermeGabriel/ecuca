@@ -54,7 +54,7 @@ export class Login extends Component {
             const stackAction = StackActions.reset({
                 index: 0,
                 actions: [
-                    NavigationActions.navigate({ routeName: 'Home' })
+                    NavigationActions.navigate({ routeName: 'Home', params: { name: userInfo.user.givenName } })
                 ]
             })
             this.props.navigation.dispatch(stackAction);
