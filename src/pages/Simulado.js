@@ -3,7 +3,7 @@ import { View, TouchableOpacity, Text, Image, StyleSheet, Dimensions, ScrollView
 import ProgressBar from 'react-native-progress/Bar'
 import ChoosesQuestionsSimulado from '../Components/ChoosesQuestionsSimulado'
 import Icon from 'react-native-vector-icons/AntDesign';
-import { Provas_Files } from '../assets/Provas/Provas_Files'
+import { Provas_Files, Provas_Images } from '../assets/Provas/Provas_Files'
 import Sistema from '../Sistema';
 
 class Simulado extends Component {
@@ -23,14 +23,14 @@ class Simulado extends Component {
     constructor(props) {
         super(props)
 
-        const fase = this.props.navigation.state.params.f
-        const nivel = this.props.navigation.state.params.n
-        const ano = this.props.navigation.state.params.ano
+        this.fase = this.props.navigation.state.params.f
+        this.nivel = this.props.navigation.state.params.n
+        this.ano = this.props.navigation.state.params.ano
 
         const lastQuestion = this.props.navigation.state.params.lQ
         const cA = []
 
-        this.provaFile = Provas_Files[`n${nivel}f${fase}${ano}`]
+        this.provaFile = Provas_Files[`n${this.nivel}f${this.fase}${this.ano}`]
         this.prova = this.provaFile
         this.prova.questions.forEach(element => {
             cA.push(element.answer)
@@ -43,7 +43,8 @@ class Simulado extends Component {
             correctAnswers: cA,
             enunc: this.prova.questions[lastQuestion].enun,
             alter: this.prova.questions[lastQuestion].alter,
-            imgQ: this.prova.questions[lastQuestion].img
+            imgQ: Provas_Images['p' + this.ano].Provas_Images['q' + lastQuestion],
+            imgR: Provas_Images['p' + this.ano].Provas_Images['r' + lastQuestion]
         }
         this.selectedAnswerForQuestion = this.selectedAnswerForQuestion.bind(this)
         this.changeQuestion = this.changeQuestion.bind(this)
@@ -75,7 +76,8 @@ class Simulado extends Component {
                 actualQuestion: this.state.actualQuestion + 1,
                 enunc: this.prova.questions[this.state.actualQuestion + 1].enun,
                 alter: this.prova.questions[this.state.actualQuestion + 1].alter,
-                imgQ: this.prova.questions[this.state.actualQuestion + 1].img,
+                imgQ: Provas_Images['p' + this.ano].Provas_Images['q' + (this.state.actualQuestion + 1)],
+                imgR: Provas_Images['p' + this.ano].Provas_Images['r' + (this.state.actualQuestion + 1)],
             });
         }
 
@@ -84,7 +86,8 @@ class Simulado extends Component {
                 actualQuestion: this.state.actualQuestion - 1,
                 enunc: this.prova.questions[this.state.actualQuestion - 1].enun,
                 alter: this.prova.questions[this.state.actualQuestion - 1].alter,
-                imgQ: this.prova.questions[this.state.actualQuestion - 1].img,
+                imgQ: Provas_Images['p' + this.ano].Provas_Images['q' + (this.state.actualQuestion - 1)],
+                imgR: Provas_Images['p' + this.ano].Provas_Images['r' + (this.state.actualQuestion - 1)],
             });
         }
     }
@@ -134,15 +137,6 @@ class Simulado extends Component {
         this.setState(s);
     }
 
-    getImage() {
-        //alert(this.state.imgQ)
-        //const v = eval("require('../assets/Provas/2005/n1f1imgs/2.png')")
-        //console.log(eval("require('x.js')"));
-        //return v
-        const f = eval(this.state.imgQ)
-        return f
-    }
-
     render() {
         return (
             <View style={styles.container}>
@@ -154,7 +148,7 @@ class Simulado extends Component {
                     progress={(this.state.actualQuestion + 1) / 20} />
                 <ScrollView >
                     <Text style={styles.title}>Questão {this.state.actualQuestion + 1} de 20</Text>
-                    <Image resizeMode='contain' style={styles.img} source={require('../assets/Provas/2005/n1f1imgs/2.png')}></Image>
+                    <Image resizeMode='contain' style={styles.img} source={this.state.imgR}></Image>
                     <Text style={styles.enunciado}>{this.state.enunc}</Text>
                     <ChoosesQuestionsSimulado
                         isPremium={this.state.isPremium}

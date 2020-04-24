@@ -3,7 +3,6 @@
         {
             "answer": "B",
             "enun": "Qual é o número obtido calculando 2005 - 205 + 25 - 2 ?",
-            "img": "../assets/Provas/2005/n1f1imgs/2.png",
             "alter": [
                 "1 773",
                 "1 823",
@@ -15,7 +14,6 @@
         {
             "answer": "B",
             "enun": "Guilherme está medindo o comprimento de um selo comum pedaço de uma régua, graduada em centímetros, como mostra a figura.Qual é o comprimento do selo ? ",
-            "img": "./n1f1imgs/2.png",
             "alter": [
                 "3 cm",
                 "3,4 cm",
