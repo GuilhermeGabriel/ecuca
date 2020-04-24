@@ -3,7 +3,6 @@ import { View, TouchableOpacity, Text, Image, StyleSheet, Dimensions, ScrollView
 import ProgressBar from 'react-native-progress/Bar'
 import ChoosesQuestionsSimulado from '../Components/ChoosesQuestionsSimulado'
 import Icon from 'react-native-vector-icons/AntDesign';
-
 import { Provas_Files } from '../assets/Provas/Provas_Files'
 import Sistema from '../Sistema';
 
@@ -67,6 +66,7 @@ class Simulado extends Component {
                 this.setState({ isPremium: false })
             }
         });
+
     }
 
     changeQuestion(action) {
@@ -134,6 +134,15 @@ class Simulado extends Component {
         this.setState(s);
     }
 
+    getImage() {
+        //alert(this.state.imgQ)
+        //const v = eval("require('../assets/Provas/2005/n1f1imgs/2.png')")
+        //console.log(eval("require('x.js')"));
+        //return v
+        const f = eval(this.state.imgQ)
+        return f
+    }
+
     render() {
         return (
             <View style={styles.container}>
@@ -145,7 +154,7 @@ class Simulado extends Component {
                     progress={(this.state.actualQuestion + 1) / 20} />
                 <ScrollView >
                     <Text style={styles.title}>Questão {this.state.actualQuestion + 1} de 20</Text>
-                    <Image resizeMode='contain' style={styles.img} source={this.state.imgQ}></Image>
+                    <Image resizeMode='contain' style={styles.img} source={require('../assets/Provas/2005/n1f1imgs/2.png')}></Image>
                     <Text style={styles.enunciado}>{this.state.enunc}</Text>
                     <ChoosesQuestionsSimulado
                         isPremium={this.state.isPremium}

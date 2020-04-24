@@ -52,11 +52,11 @@ Resolucao = (props) => {
         )
     } else {
         return (
-            <View style={{ height: 400 }}>
+            <View style={{ height: 380 }}>
                 <Text style={styles.titleResolucao}>Resolução:</Text>
                 <Icon style={{ alignSelf: 'center', marginTop: 50 }} name="lock1" size={48} color="darkorange" />
                 <Text style={{ alignSelf: 'center', margin: 12, fontSize: 16, textAlign: 'center' }}> Resolução da questão bloqueada,{"\n"} atualize para Ecuca Pro para ter a resolução detalhada.</Text>
-                <TouchableOpacity onPress={() => { InAppSistema.getProducts() }}>
+                <TouchableOpacity onPress={() => { props.billingSistema.startPurchase() }}>
                     <Text style={{ alignSelf: 'center', textAlign: 'center', fontWeight: 'bold', fontSize: 16, backgroundColor: 'green', borderRadius: 8, color: 'white', padding: 16 }}>Desbloquear Ecuca Pro</Text>
                 </TouchableOpacity>
             </View>
@@ -69,10 +69,13 @@ class ChoosesQuestionsSimulado extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            selected: ''
+            selected: '',
+            billingSistema: InAppSistema
         }
 
+        this.state.billingSistema.setListners()
         this.selectAlter = this.selectAlter.bind(this)
+        this.state.billingSistema.getAvailablePurchases()
     }
 
     selectAlter(item) {
@@ -90,6 +93,10 @@ class ChoosesQuestionsSimulado extends Component {
 
         this.setState(s);
         this.props.onClick(this.props.actualQuestion, this.state.selected)
+    }
+
+    componentWillUnmount() {
+        this.state.billingSistema.closeListeners()
     }
 
     render() {
@@ -149,6 +156,7 @@ class ChoosesQuestionsSimulado extends Component {
                 <View style={styles.divisor} />
 
                 <Resolucao
+                    billingSistema={this.state.billingSistema}
                     isPremium={this.props.isPremium}
                     showResolutionView={this.props.ableToSelectNewQuestion}>
                 </Resolucao>

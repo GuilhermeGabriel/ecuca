@@ -1,65 +1,90 @@
 import RNIap, { purchaseErrorListener, purchaseUpdatedListener } from 'react-native-iap';
+import Sistema from '../src/Sistema'
+
+const itemSkus = Platform.select({
+    ios: [
+        ''
+    ],
+    android: [
+        'ecuca_subs_pro'
+    ]
+});
 
 class InAppSistema {
     constructor() {
-        //purchaseUpdatedListener = null
-        //purchaseErrorListener = null
+        this.purchaseUpdatedListener = null
+        this.purchaseErrorSubscription = null
+        this.init()
+    }
+
+    async init() {
+        await RNIap.initConnection()
+    }
+
+    async endConnection() {
+        await RNIap.endConnection();
+    }
+
+    async getAvailablePurchases() {
+        try {
+            const purchases = await RNIap.getAvailablePurchases();
+            const filtered = purchases.filter(item => item.productId == 'ecuca_subs_pro')
+
+            if (filtered.length == 0) {
+                Sistema.setUserToPremium('k2PywrrnuLWC0DL5ktjiBiB3FNG3', false)
+            }
+        } catch (err) {
+            Alert.alert(err.message);
+        }
     }
 
     requestPurchase = async (sku) => {
         try {
-            await RNIap.requestPurchase(sku, false);
+            await RNIap.requestSubscription(sku, false);
         } catch (err) {
-            alert(err.code, err.message);
+            //alert(err.code, err.message);
         }
     }
 
-    async getProducts() {
+    async startPurchase() {
         try {
-            this.setListners()
-            this.requestPurchase('apoioaoapp')
+            const products = await RNIap.getSubscriptions(itemSkus);
+            this.requestPurchase(products[0].productId)
         } catch (err) {
-            console.warn(err); // standardized err.code and err.message available
+            //alert(err.message);
         }
     }
 
     setListners() {
         this.purchaseUpdateSubscription = purchaseUpdatedListener(purchase => {
-            alert('purchaseUpdatedListener', purchase);
             const receipt = purchase.transactionReceipt;
             if (receipt) {
-                /*yourAPI.deliverOrDownloadFancyInAppPurchase(purchase.transactionReceipt)
-                    .then((deliveryResult) => {
-                        if (isSuccess(deliveryResult)) {
-                            // Tell the store that you have delivered what has been paid for.
-                            // Failure to do this will result in the purchase being refunded on Android and
-                            // the purchase event will reappear on every relaunch of the app until you succeed
-                            // in doing the below. It will also be impossible for the user to purchase consumables
-                            // again untill you do this.
-                            if (Platform.OS === 'ios') {
-                                RNIap.finishTransactionIOS(purchase.transactionId);
-                            } else if (Platform.OS === 'android') {
-                                // If consumable (can be purchased again)
-                                RNIap.consumePurchaseAndroid(purchase.purchaseToken);
-                                // If not consumable
-                                RNIap.acknowledgePurchaseAndroid(purchase.purchaseToken);
-                            }
-
-                            // From react-native-iap@4.1.0 you can simplify above `method`. Try to wrap the statement with `try` and `catch` to also grab the `error` message.
-                            // If consumable (can be purchased again)
-                            RNIap.finishTransaction(purchase, true);
-                            // If not consumable
-                            RNIap.finishTransaction(purchase, false);
-                        } else {
-                            // Retry / conclude the purchase is fraudulent, etc...
-                        }
-                    });*/
+                //alert(receipt)
+                Sistema.setUserToPremium('k2PywrrnuLWC0DL5ktjiBiB3FNG3', true)
+                    .then(() => {
+                        RNIap.acknowledgePurchaseAndroid(receipt.purchaseToken);
+                        RNIap.finishTransaction(purchase, false);
+                    })
             }
         });
 
         this.purchaseErrorSubscription = purchaseErrorListener(error => {
-            alert('purchaseErrorListener', error);
+            //alert('purchaseErrorListener', error);
         });
+    }
+
+    closeListeners() {
+        if (this.purchaseUpdateSubscription) {
+            this.purchaseUpdateSubscription.remove();
+            this.purchaseUpdateSubscription = null;
+        }
+
+        if (this.purchaseErrorSubscription) {
+            this.purchaseErrorSubscription.remove();
+            this.purchaseErrorSubscription = null;
+        }
+
+        this.endConnection();
     }
 }
 

@@ -53,6 +53,13 @@ class FirebaseSistema {
             .onSnapshot(onSnapshot);
     }
 
+    setUserToPremium(uid, value) {
+        return firestore()
+            .collection('users')
+            .doc(uid)
+            .update('isPremium', value)
+    }
+
     loadAllSimulados(uid, onSnap) {
         firestore()
             .collection('users')
