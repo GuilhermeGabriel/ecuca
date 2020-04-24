@@ -42,9 +42,10 @@ class Simulado extends Component {
             selectedsFromDb: [],
             correctAnswers: cA,
             enunc: this.prova.questions[lastQuestion].enun,
+            res: this.prova.questions[lastQuestion].res,
             alter: this.prova.questions[lastQuestion].alter,
-            imgQ: Provas_Images['p' + this.ano].Provas_Images['q' + lastQuestion],
-            imgR: Provas_Images['p' + this.ano].Provas_Images['r' + lastQuestion]
+            imgQ: Provas_Images['p' + this.ano].Images['q' + lastQuestion],
+            imgR: Provas_Images['p' + this.ano].Images['r' + lastQuestion]
         }
         this.selectedAnswerForQuestion = this.selectedAnswerForQuestion.bind(this)
         this.changeQuestion = this.changeQuestion.bind(this)
@@ -67,7 +68,6 @@ class Simulado extends Component {
                 this.setState({ isPremium: false })
             }
         });
-
     }
 
     changeQuestion(action) {
@@ -76,8 +76,9 @@ class Simulado extends Component {
                 actualQuestion: this.state.actualQuestion + 1,
                 enunc: this.prova.questions[this.state.actualQuestion + 1].enun,
                 alter: this.prova.questions[this.state.actualQuestion + 1].alter,
-                imgQ: Provas_Images['p' + this.ano].Provas_Images['q' + (this.state.actualQuestion + 1)],
-                imgR: Provas_Images['p' + this.ano].Provas_Images['r' + (this.state.actualQuestion + 1)],
+                res: this.prova.questions[this.state.actualQuestion + 1].res,
+                imgQ: Provas_Images['p' + this.ano].Images['q' + (this.state.actualQuestion + 1)],
+                imgR: Provas_Images['p' + this.ano].Images['r' + (this.state.actualQuestion + 1)],
             });
         }
 
@@ -86,8 +87,9 @@ class Simulado extends Component {
                 actualQuestion: this.state.actualQuestion - 1,
                 enunc: this.prova.questions[this.state.actualQuestion - 1].enun,
                 alter: this.prova.questions[this.state.actualQuestion - 1].alter,
-                imgQ: Provas_Images['p' + this.ano].Provas_Images['q' + (this.state.actualQuestion - 1)],
-                imgR: Provas_Images['p' + this.ano].Provas_Images['r' + (this.state.actualQuestion - 1)],
+                res: this.prova.questions[this.state.actualQuestion - 1].res,
+                imgQ: Provas_Images['p' + this.ano].Images['q' + (this.state.actualQuestion - 1)],
+                imgR: Provas_Images['p' + this.ano].Images['r' + (this.state.actualQuestion - 1)],
             });
         }
     }
@@ -148,11 +150,13 @@ class Simulado extends Component {
                     progress={(this.state.actualQuestion + 1) / 20} />
                 <ScrollView >
                     <Text style={styles.title}>Questão {this.state.actualQuestion + 1} de 20</Text>
-                    <Image resizeMode='contain' style={styles.img} source={this.state.imgR}></Image>
+                    <Image resizeMode='contain' style={styles.img} source={this.state.imgQ}></Image>
                     <Text style={styles.enunciado}>{this.state.enunc}</Text>
                     <ChoosesQuestionsSimulado
                         isPremium={this.state.isPremium}
                         showAnswer={this.state.selectedsFromDb[this.state.actualQuestion] != undefined}
+                        res={this.state.res}
+                        imgR={this.state.imgR}
                         ableToSelectNewQuestion={this.state.selectedsFromDb[this.state.actualQuestion] != undefined}
                         alternativas={this.state.alter}
                         actualQuestion={this.state.actualQuestion}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, TouchableOpacity, Text, StyleSheet } from 'react-native'
+import { View, TouchableOpacity, Text, Image, StyleSheet, Dimensions } from 'react-native'
 import Icon from 'react-native-vector-icons/AntDesign';
 import InAppSistema from '../InAppSistema'
 
@@ -47,7 +47,9 @@ Resolucao = (props) => {
         return (
             <View>
                 <Text style={styles.titleResolucao}>Resolução:</Text>
-                <Text style={{ fontSize: 18, marginTop: 16 }}>sdffsdffsdffddsdffdsdffdsdffdsdffdsdffsdffddsdffdsdffdsdffdsdffdsdffsdffddsdffdsdffdsdffdsdffdsdffsdffddsdffdsdffdsdffdsdffdsdffsdffdsdffsdffsdffddsdffdsdffdsdffdsdffdsdffsdffddsdffdsdffdsdffdsdffdsdffsdffddsdffdsdffdsdffdsdffdsdffsdffddsdffdsdffdsdffdsdffdsdffsdffddsdffdsdffdsdffdsdffdsdffddsdffdsdffdsdffdsdffddsdffdsdffdsdffdsdffdsdffddsdffdsdffdsdffdsdffd</Text>
+                <Text style={{ fontSize: 18, fontWeight: 'bold', marginTop: 16 }}>(Alternativa {props.actualAnswer})</Text>
+                <Text style={{ fontSize: 18, marginTop: 8 }}>{props.res}</Text>
+                <Image style={{ width: Dimensions.get('window').width - 20, alignSelf: 'center', marginTop: 16 }} resizeMode='contain' source={props.imgR}></Image>
             </View>
         )
     } else {
@@ -156,6 +158,9 @@ class ChoosesQuestionsSimulado extends Component {
                 <View style={styles.divisor} />
 
                 <Resolucao
+                    actualAnswer={this.props.actualAnswer}
+                    res={this.props.res}
+                    imgR={this.props.imgR}
                     billingSistema={this.state.billingSistema}
                     isPremium={this.props.isPremium}
                     showResolutionView={this.props.ableToSelectNewQuestion}>
