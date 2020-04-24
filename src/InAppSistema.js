@@ -1,14 +1,5 @@
 import RNIap, { purchaseErrorListener, purchaseUpdatedListener } from 'react-native-iap';
 
-const itemSkus = Platform.select({
-    ios: [
-        ''
-    ],
-    android: [
-        'apoioaoapp'
-    ]
-});
-
 class InAppSistema {
     constructor() {
         //purchaseUpdatedListener = null
@@ -25,9 +16,6 @@ class InAppSistema {
 
     async getProducts() {
         try {
-            const products = await RNIap.getProducts(itemSkus);
-            //this.setState({ products });
-            //alert(products[0].description)
             this.setListners()
             this.requestPurchase('apoioaoapp')
         } catch (err) {

@@ -4,7 +4,7 @@ import ProgressBar from 'react-native-progress/Bar'
 import ChoosesQuestionsSimulado from '../Components/ChoosesQuestionsSimulado'
 import Icon from 'react-native-vector-icons/AntDesign';
 
-import { n1f1 } from '../assets/Provas/2005/n1f1'
+import { Provas_Files } from '../assets/Provas/Provas_Files'
 import Sistema from '../Sistema';
 
 class Simulado extends Component {
@@ -28,13 +28,12 @@ class Simulado extends Component {
         const nivel = this.props.navigation.state.params.n
         const ano = this.props.navigation.state.params.ano
 
-        //const path = `../assets/Provas/${ano}/n${nivel}f${fase}.json`
-        //const customData = require('../assets/Provas/2005/n1f1.json');
-
-        this.prova = n1f1
         const lastQuestion = this.props.navigation.state.params.lQ
-        const cA = [];
-        n1f1.questions.forEach(element => {
+        const cA = []
+
+        this.provaFile = Provas_Files[`n${nivel}f${fase}${ano}`]
+        this.prova = this.provaFile
+        this.prova.questions.forEach(element => {
             cA.push(element.answer)
         });
 
