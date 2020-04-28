@@ -44,8 +44,8 @@ class Simulado extends Component {
             enunc: this.prova.questions[lastQuestion].enun,
             res: this.prova.questions[lastQuestion].res,
             alter: this.prova.questions[lastQuestion].alter,
-            imgQ: Provas_Images['p' + this.ano].Images['q' + lastQuestion],
-            imgR: Provas_Images['p' + this.ano].Images['r' + lastQuestion]
+            imgQ: Provas_Images['n' + this.nivel + 'f' + this.fase + this.ano].Images['q' + lastQuestion],
+            imgR: Provas_Images['n' + this.nivel + 'f' + this.fase + this.ano].Images['r' + lastQuestion]
         }
         this.selectedAnswerForQuestion = this.selectedAnswerForQuestion.bind(this)
         this.changeQuestion = this.changeQuestion.bind(this)
@@ -77,8 +77,8 @@ class Simulado extends Component {
                 enunc: this.prova.questions[this.state.actualQuestion + 1].enun,
                 alter: this.prova.questions[this.state.actualQuestion + 1].alter,
                 res: this.prova.questions[this.state.actualQuestion + 1].res,
-                imgQ: Provas_Images['p' + this.ano].Images['q' + (this.state.actualQuestion + 1)],
-                imgR: Provas_Images['p' + this.ano].Images['r' + (this.state.actualQuestion + 1)],
+                imgQ: Provas_Images['n' + this.nivel + 'f' + this.fase + this.ano].Images['q' + (this.state.actualQuestion + 1)],
+                imgR: Provas_Images['n' + this.nivel + 'f' + this.fase + this.ano].Images['r' + (this.state.actualQuestion + 1)],
             });
         }
 
@@ -88,8 +88,8 @@ class Simulado extends Component {
                 enunc: this.prova.questions[this.state.actualQuestion - 1].enun,
                 alter: this.prova.questions[this.state.actualQuestion - 1].alter,
                 res: this.prova.questions[this.state.actualQuestion - 1].res,
-                imgQ: Provas_Images['p' + this.ano].Images['q' + (this.state.actualQuestion - 1)],
-                imgR: Provas_Images['p' + this.ano].Images['r' + (this.state.actualQuestion - 1)],
+                imgQ: Provas_Images['n' + this.nivel + 'f' + this.fase + this.ano].Images['q' + (this.state.actualQuestion - 1)],
+                imgR: Provas_Images['n' + this.nivel + 'f' + this.fase + this.ano].Images['r' + (this.state.actualQuestion - 1)],
             });
         }
     }

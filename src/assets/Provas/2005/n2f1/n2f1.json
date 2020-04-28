@@ -1,0 +1,244 @@
+{
+    "questions": [
+        {
+            "answer": "B",
+            "res": "Por leitura direta da figura, vemos que uma extremidade do selo está na marca de 20 cm e a outra na marca de 16,6 cm. O comprimento do selo é a diferença entre estes dois valores, ou seja, 20 - 16,6 = 20,0 - 16,6 = 3,4 cm.",
+            "enun": "Guilherme está medindo o comprimento de um selo com um pedaço de uma régua, graduada em centímetros, como mostra a figura. Qual é o comprimento do selo?",
+            "alter": [
+                "3 cm",
+                "3,4 cm",
+                "3,6 cm",
+                "4 cm",
+                "4,4 cm"
+            ]
+        },
+        {
+            "answer": "E",
+            "res": "Os desenhos abaixo mostram como juntar as duas peças para obter as alternativas (A), (B), (C) e (D). Apenas a alternativa (E)  não pode ser obtida juntando as duas peças, como se pode verificar diretamente por tentativas.",
+            "enun": "",
+            "alter": [
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "answer": "D",
+            "res": "As figuras mostram que o tanque de gasolina do carro continha 3/4 de sua capacidade no momento de partida e 1/4 no momento de chegada. Deste modo, João gastou 3/4 - 1/4 = 1/2 do tanque na viagem. Como o tanque tem capacidade para 50 litros, isto quer dizer que João gastou 50 x 1/2 = 25 litros de gasolina na viagem. Note que esta última conta pode ser pensada como “João gastou meio tanque de gasolina e a metade de 50 é 25”.",
+            "enun": "A capacidade do tanque de gasolina do carro de João é de 50 litros. As figuras mostram o medidor de gasolina do carro no momento de partida e no momento de chegada de uma viagem feita por João. Quantos litros de gasolina João gastou nesta viagem?",
+            "alter": [
+                "10",
+                "15",
+                "18",
+                "25",
+                "30"
+            ]
+        },
+        {
+            "answer": "D",
+            "res": "Se n é o menor destes números então os outros dois são n + 1 e n + 2 . A soma dos três números é n + (n + 1) + (n + 2) = 90. Logo 3n + 3 = 90, donde 3n = 87 e segue que n = 29. Logo os números são 29, 30 e 31 e o maior é 31.",
+            "enun": "A soma de três números inteiros consecutivos é igual a 90. Qual é o maior destes três números?",
+            "alter": [
+                "21",
+                "28",
+                "29",
+                "31",
+                "32"
+            ]
+        },
+        {
+            "answer": "C",
+            "res": "Como há 22 times no campeonato e cada time só não enfrenta a si próprio, então ele joga 21 vezes (com os outros 21 times) em seu campo e mais 21 vezes nos campos dos adversários. No total cada time disputa 21 + 21 = 42 partidas.",
+            "enun": "O campeonato 2005 é disputado por 22 times. Cada time enfrenta cada um dos outros duas vezes, uma vez em seu campo e outra no campo do adversário. Quantas partidas serão disputadas por cada time?",
+            "alter": [
+                "40",
+                "41",
+                "42",
+                "43",
+                "44"
+            ]
+        },
+        {
+            "answer": "E",
+            "res": "Como o time disputou 20 jogos, venceu 8 e perdeu 8, o número de empates é: 20 - 8 - 8 = 4 . Logo, o time obteve 8 x 3 = 24 pontos com as vitórias e 4 x 1 = 4 pontos com os empates. Portanto, o time obteve 24 + 4 = 28 pontos (o time não ganha pontos quando perde).",
+            "enun": "Um time ganha 3 pontos por vitória, 1 ponto por empatee nenhum ponto em caso de derrota. Até hoje cada time já disputou 20 jogos. Se um desses times venceu 8 jogos e perdeu outros 8 jogos, quantos pontos ele tem até agora?",
+            "alter": [
+                "23",
+                "25",
+                "26",
+                "27",
+                "28"
+            ]
+        },
+        {
+            "answer": "C",
+            "res": "Inicialmente a quantia de 200 reais deveria ser dividida igualmente entre as 20 pessoas e assim cada uma deveria pagar 200  ̧ 10 = 20 reais. De acordo com o enunciado, a quantia paga por cada pessoa que participou do passeio foi 10 + 15 = 25 reais. Logo, participaram do passeio, 200  ̧ 25 = 8 pessoas, e concluímos que 20 - 8 = 12 pessoas desistiram do passeio.",
+            "enun": "7. Vinte pessoas resolveram alugar um barco por R$ 200,00, quantia que seria dividida igualmente entre todos. No dia do passeio algumas pessoas desistiram. Por causa disso, cada participante do passeio teve que pagar R$ 15,00 a mais. Quantas pessoas desistiram do passeio?",
+            "alter": [
+                "10",
+                "11",
+                "12",
+                "13",
+                "14"
+            ]
+        },
+        {
+            "answer": "D",
+            "res": "Os múltiplos de 3 maiores do que 1 e menores do que 2005 são os números 3 x 1, 3 x 2, 3 x 3, ..., 3 x n onde 3 x n é o maior múltiplo de 3 menor do que 2005. Usando o algoritmo da divisão, podemos escrever 2005 = 3 x 668 + 1 e segue que n = 668.",
+            "enun": "Quantos números inteiros, múltiplos de 3, existem entre 1 e 2 005?",
+            "alter": [
+                "664",
+                "665",
+                "667",
+                "668",
+                "669"
+            ]
+        },
+        {
+            "answer": "A",
+            "res": "Os números nos bilhetes comprados por Marcelo são da forma 777X, 77X7, 7X77 ou X777, onde X representa algum dos oito algarismos 1, 2, 3, 4, 5, 6, 8 e 9. Em cada um desses casos, há 8 possibilidades para os números dos bilhetes. Por exemplo, no primeiro caso, temos os seguintes oito números: 7771, 7772, 7773, 7774, 7775, 7776, 7778 e 7779. Portanto, o número de bilhetes comprados por Marcelo é 4 x 8 = 32.",
+            "enun": "Os bilhetes de uma rifa são numerados de 1 000 a 9 999. Marcelo comprou todos os bilhetes nos quais o algarismo sete aparece exatamente três vezes e o zero não aparece. Quantos bilhetes Marcelo comprou?",
+            "alter": [
+                "32",
+                "36",
+                "45",
+                "46",
+                "48"
+            ]
+        },
+        {
+            "answer": "E",
+            "res": "Às 12h 30min o ponteiro dos minutos deu meia volta no relógio a partir do número 12 do mostrador, ou seja, percorreu 360°/2 = 180o. Os números 1, 2, 3, ... ,12 do mostrador do relógio dividem a circunferência em doze ângulos iguais, cada um com 360°/12 = 30° . Logo, a cada hora, o ponteiro das horas (o menor) percorre um ângulo de 30° ; em meia-hora este ponteiro percorre então 30°/2 = 15°. Logo, o ângulo formado pelos dois ponteiros é 180° - 15o = 165°.",
+            "enun": "Qual é a medida do menor ângulo formado pelos ponteiros de um relógio quando ele marca 12 horas e 30 minutos?",
+            "alter": [
+                "90°",
+                "120°",
+                "135°",
+                "150°",
+                "165°"
+            ]
+        },
+        {
+            "answer": "C",
+            "res": "As amostras cujo percentual de álcool é maior que o de gasolina são aquelas que contêm mais de 50% de álcool. No gráfico, estas amostras correspondem àquelas cuja barra horizontal ultrapassa a marca de 50%, que são as amostras 1, 2 e 3.",
+            "enun": "Para testar a qualidade de um combustível composto apenas de gasolina e álcool, uma empresa recolheu oito amostras em vários postos de gasolina. Para cada amostra foi determinado o percentual de álcool e o resultado é mostrado no gráfico abaixo. Em quantas dessas amostras o percentual de álcool é maior que o percentual de gasolina?",
+            "alter": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ]
+        },
+        {
+            "answer": "E",
+            "res": "Se denotarmos por x o número de bolas azuis, então o número de bolas brancas é 2 x . Além disso temos x + 10 = 2x - 10 = y, onde y denota o número de bolas verdes.De x + 10 = 2 x - 10 obtemos x = 20, donde y = 20 +10 =30. Portanto temos 20 bolas brancas, 40 bolas azuis e 30 bolas verdes. Assim, no total há 20 + 40 + 30 = 90 bolas na caixa.",
+            "enun": "Uma caixa contém somente bolas azuis, verdes e brancas. O número de bolas brancas é o dobro do número de bolas azuis. Se colocarmos 10 bolas azuis e retirarmos 10 bolas brancas, a caixa passará a conter o mesmo número de bolas de cada cor. Quantas bolas a caixa contém? ",
+            "alter": [
+                "30",
+                "40",
+                "60",
+                "80",
+                "90"
+            ]
+        },
+        {
+            "answer": "B",
+            "res": "Observe a figura, onde x indica o número da cadeira oposta à cadeira de número 27. Como as 100 cadeiras estão regularmente espaçadas, nos espaços entre as cadeiras 27 e x estão as outras 98 cadeiras; assim, em cada um destes espaços, temos 49 cadeiras. Logo o número da cadeira x é 27 + 49 +1 = 77.",
+            "enun": "Para uma atividade com sua turma, uma professora distribuiu 100 cadeiras em volta de uma grande mesa redonda e numerou-as consecutivamente de 1 a 100. A professora, que é muito caprichosa, colocou as cadeiras voltadas para o centro da mesa, mantendo a mesma distância entre cada cadeira e suas duas vizinhas. Qual é o número da cadeira que ficou exatamente à frente da cadeira com o número 27?",
+            "alter": [
+                "76",
+                "77",
+                "78",
+                "79",
+                "80"
+            ]
+        },
+        {
+            "answer": "B",
+            "res": "Abaixo estão indicadas as 4 figuras que possuem um ou mais eixos de simetria.",
+            "enun": "",
+            "alter": [
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+            ]
+        },
+        {
+            "answer": "A",
+            "res": "A soma dos três ângulos internos de um triângulo é 180°. Como o ângulo Â do triângulo ABC mede 30°, a soma dos ângulos ABC e ACB é 180° - 30° = 150°. Por outro lado, como o triângulo é isósceles de base BC, os ângulos ABC e ACB são iguais, logo cada um deles mede 150°/2 = 75° . Como o triângulo BCD é isósceles de base BD, temos BDC = CBD = 75°. O mesmo raciocínio usado acima mostra que DCB = 180° - 2 x 75° = 30°. Segue que DCA = ACB - DCB = 75° - 30° = 45°.",
+            "enun": "O triângulo ABC é isósceles de base BC e o ângulo mede 30°. O triângulo BCD é isósceles de base BD. Determine a medida do ângulo .",
+            "alter": [
+                "45",
+                "50",
+                "60",
+                "75",
+                "90"
+            ]
+        },
+        {
+            "answer": "D",
+            "res": "Como o padrão de distribuição dos números pelas colunas se repete de 15 em 15, na coluna E estarão os múltiplos de 15. O algoritmo da divisão nos diz que 2005 = 133 x 15 + 10 = 1995 + 10. Logo 1995 ocupará a coluna E, e para alcançarmos 2005 faltam mais 10 números (de 1996 a 2005) para serem colocados na tabela. Colocando esses números na tabela de acordo com o padrão, verificamos que 2005 ocupará a coluna D.",
+            "enun": "Distribuímos os números inteiros positivos em uma tabela com cinco colunas, conforme o seguinte padrão.  Continuando a preencher a tabela desta maneira, qual será a coluna ocupada pelo número 2 005?",
+            "alter": [
+                "coluna A",
+                "coluna B",
+                "coluna C",
+                "coluna D",
+                "coluna E"
+            ]
+        },
+        {
+            "answer": "E",
+            "res": "Denotemos por a, b e l os pesos do abacate, da banana e da laranja respectivamente. Do enunciado temos 4a = 9b e 3b = 2l. Logo 4a = 3 x 3b = 3 x 2/ = 6/. Segue que 2a = 3/ e daí 6a = 9/.",
+            "enun": "Usando uma balança de dois pratos, verificamos que 4 abacates pesam o mesmo que 9 bananas e que 3 bananas pesam o mesmo que 2 laranjas. Se colocarmos 9 laranjas num prato da balança, quantos abacates deveremos colocar no outro prato, para equilibrar a balança?",
+            "alter": [
+                "1",
+                "2",
+                "4",
+                "5",
+                "6"
+            ]
+        },
+        {
+            "answer": "B",
+            "res": "No primeiro mês foi construído 1/3 da escola, restando assim 1 - 1/3 = 2/3 da escola para serem construídos. Logo, no segundo mês foi construído 1/3 dos 2/3 restantes, isto é, 1/3 x 2/3 = 2/9 da escola. Portanto, nos dois meses foram construídos 1/3 + 2/9 = 5/9 da escola, e falta construir 1 - 5/9 = 4/9 da escola.",
+            "enun": "18. Dois meses atrás o prefeito de uma cidade iniciou a construção de uma nova escola. No primeiro mês foi feito 1/3 da obra e no segundo mês mais 1/3 do que faltava. A que fração da obra corresponde a parte ainda não construída da escola?",
+            "alter": [
+                "1/3",
+                "4/9",
+                "1/2",
+                "2/3",
+                "5/6"
+            ]
+        },
+        {
+            "answer": "A",
+            "res": "A área pedida é igual à área do polígno ABCDEF mens a soma das áreas dos triângulos retângulos AEF e DEG. A área do triângulo AEF é (AF x EF)/2 = (3 x 2)/2 = 3 cm². Vamos agora Vamos agora calcular a área do triângulo DEG. Para calcular DE prolongamos EF até o ponto H, obtendo assim os retângulos ABHF e CDEH. Como os lados opostos de um retângulo são iguais, segue que DE = CH = CB - BH = 6 - AF = 6 - 3 = 3. Como os lados AF e DE são paralelos, então EÂF = GÊD. Além disso AF = ED, logo os triângulos AEF e DEG são congruentes (caso ALA) e portanto, têm a mesma área. A área do retângulo ABHF é AD x AF = 8 x 3 = 24 cm2, e a do retângulo CDEH é DE x CD = 3 x (AB - EF) = 3x(8 - 2) = 18 cm2. Portanto a área procurada é 24 + 18 - 2 x 3 = 36 cm2. Alternativamente, a área do trapézio ABCG cuja altura é BC = 6 e cuja as bases são AB = 8 e CG = CD - GD = 6 -2 = 4 pode ser calculada diretamente. Portanto a área é (8+4)/2 + 6 = 36",
+            "enun": "A figura mostra um polígono ABCDEF no qual dois lados consecutivos quaisquer são perpendiculares. O ponto G está sobre o lado CD e sobre a reta que passa por A e E. Os comprimentos de alguns lados estão indicados em centímetros. Qual é a área do polígono ABCG ?",
+            "alter": [
+                "36 cm²",
+                "37 cm²",
+                "38 cm²",
+                "39 cm²",
+                "40 cm²"
+            ]
+        },
+        {
+            "answer": "E",
+            "res": "Acompanhe a solução com a ajuda da figura a seguir, que ilustra as afirmativas de Regina, Paulo e Iracema. (i) Se Regina está certa, então Paulo e Iracema estão errados. Os números que satisfazem a afirmação de Regina mas não satisfazem a afirmação de Paulo são 101, 102, 103, 104 e 105; note que estes números também não satisfazem a afirmação de Iracema. Neste caso temos 5 possibilidades para o número de bolas na caixa. (ii) Se Paulo está certo, então Regina e Iracema estão erradas. O único número que satisfaz as opções de Paulo e não satisfaz as de Regina e Iracema é 120. Aqui, temos apenas uma possibilidade para o número de bolas na caixa. (iii) Se Iracema está certa, então Paulo e Regina estão errados. Os números que satisfazem a afirmação de Iracema mas não satisfazem a afirmação de Paulo são 130, 131, 132, 133, 134, 135, 136, 137, 138 e 139; note que estes números também não satisfazem a afirmação de Regina. Neste caso, temos 10 possibilidades para o número de bolas na caixa. Finalmente, o número total de possibilidades é a soma do número de possibilidades nos casos (i), (ii) e (iii), que é 5+1+10=16.",
+            "enun": "Regina, Paulo e Iracema tentam adivinhar quantas bolas estão dentro de uma caixa fechada. Eles já sabem que este número é maior que 100 e menor que 140. Eles fazem as seguintes afirmações: · Regina: Na caixa há mais de 100 bolas e menos de 120 bolas. · Paulo: Na caixa há mais de 105 bolas e menos de 130 bolas. · Iracema: Na caixa há mais de 120 bolas e menos de 140 bolas. Sabe-se que apenas uma dessas afirmações é correta. Quantos são os possíveis valores para o número de bolas dentro da caixa?",
+            "alter": [
+                "1",
+                "5",
+                "11",
+                "13",
+                "16"
+            ]
+        }
+    ]
+}

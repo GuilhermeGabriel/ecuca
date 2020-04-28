@@ -158,7 +158,7 @@
         },
         {
             "answer": "E",
-            "res": "",
+            "res": "Como os números envolvidos são pequenos, a questão pode ser resolvida efetuando os cálculos indicados e verificando a paridade do resultado: (A) 7 x 5 x 11 x 13 x 2 = 10010 que é par (B) (2005 - 2003) x (2004 + 2003) = 2 x 4007 = 8014 que é par (C) 7 + 9 + 11+ 13 + 15 + 17 = 72 que é par (D) 52 + 32 = 25 + 9 = 34 que é par (E) 3 x 5 + 7 x 9 + 11 x 13 = 15 + 63 + 143 = 221 que é ímpar Por outro lado, usando seguintes fatos sobre números inteiros par + par = par par + ímpar = ímpar ímpar + ímpar = par (qualquer número) x par = par. ímpar x ímpar = ímpar podemos argumentar como se segue. Os resultados de (A) e (B) são pares, pois ambos contêm o fator 2. Os resultados de (C) e (D) são pares pois são somas de um número par de parcelas ímpares. Finalmente o resultado de (E) é ímpar pois é a soma de um número ímpar de parcelas ímpares. Note que este argumento não depende do fato dos números envolvidos serem grandes ou pequenos.",
             "enun": "Qual das expressões abaixo tem como resultado um número ímpar?",
             "alter": [
                 "7 x 5 x 11 x 13 x 2",
