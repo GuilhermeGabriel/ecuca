@@ -40,6 +40,7 @@ class FirebaseSistema {
                     ano: ano,
                     fase: 1,
                     lQ: 0,
+                    lastModified: firestore.FieldValue.serverTimestamp(),
                 })
         } else {
             Toast.show('Você já adicionou esse simulado!', Toast.LONG);
@@ -65,6 +66,7 @@ class FirebaseSistema {
             .collection('users')
             .doc(uid)
             .collection('simulados')
+            .orderBy('lastModified', 'desc')
             .onSnapshot(onSnap)
     }
 
@@ -77,13 +79,20 @@ class FirebaseSistema {
             .onSnapshot(onSnap)
     }
 
-    markAndShowAnswer(uid, idProva, question, answer) {
-        return firestore()
+    async markAndShowAnswer(uid, idProva, question, answer) {
+        await firestore()
             .collection('users')
             .doc(uid)
             .collection('simulados')
             .doc(idProva)
             .update('selectedAnswers.' + question, answer)
+
+        await firestore()
+            .collection('users')
+            .doc(uid)
+            .collection('simulados')
+            .doc(idProva)
+            .update('lastModified', firestore.FieldValue.serverTimestamp())
     }
 }
 

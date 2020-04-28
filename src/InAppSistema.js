@@ -1,5 +1,6 @@
 import RNIap, { purchaseErrorListener, purchaseUpdatedListener } from 'react-native-iap';
 import Sistema from '../src/Sistema'
+import firebase from './FirebaseConnection'
 
 const itemSkus = Platform.select({
     ios: [
@@ -19,6 +20,9 @@ class InAppSistema {
 
     async init() {
         await RNIap.initConnection()
+        await firebase.auth().onAuthStateChanged(user => {
+            this.uid = user.uid
+        })
     }
 
     async endConnection() {
@@ -27,11 +31,11 @@ class InAppSistema {
 
     async getAvailablePurchases() {
         try {
-            const purchases = await RNIap.getAvailablePurchases();
+            const purchases = await RNIap.getAvailablePurchases()
             const filtered = purchases.filter(item => item.productId == 'ecuca_subs_pro')
 
-            if (filtered.length == 0) {
-                Sistema.setUserToPremium('k2PywrrnuLWC0DL5ktjiBiB3FNG3', false)
+            if (filtered[0].autoRenewingAndroid == false || filtered.length == 0) {
+                Sistema.setUserToPremium(this.uid, false)
             }
         } catch (err) {
             Alert.alert(err.message);
@@ -60,7 +64,7 @@ class InAppSistema {
             const receipt = purchase.transactionReceipt;
             if (receipt) {
                 //alert(receipt)
-                Sistema.setUserToPremium('k2PywrrnuLWC0DL5ktjiBiB3FNG3', true)
+                Sistema.setUserToPremium(this.uid, true)
                     .then(() => {
                         RNIap.acknowledgePurchaseAndroid(receipt.purchaseToken);
                         RNIap.finishTransaction(purchase, false);
