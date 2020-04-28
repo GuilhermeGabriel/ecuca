@@ -1,0 +1,244 @@
+{
+    "questions": [
+        {
+            "answer": "D",
+            "res": "As figuras mostram que o tanque de gasolina do carro continha 3/4 de sua capacidade no momento de partida e 1/4 no momento de chegada. Deste modo, João gastou 3/4 - 1/4 = 1/2 do tanque na viagem. Como o tanque tem capacidade para 50 litros, isto quer dizer que João gastou 50 x 1/2 = 25 litros de gasolina na viagem. Note que esta última conta pode ser pensada como “João gastou meio tanque de gasolina e a metade de 50 é 25”.",
+            "enun": "A capacidade do tanque de gasolina do carro de João é de 50 litros. As figuras mostram o medidor de gasolina do carro no momento de partida e no momento de chegada de uma viagem feita por João. Quantos litros de gasolina João gastou nesta viagem?",
+            "alter": [
+                "10",
+                "15",
+                "18",
+                "25",
+                "30"
+            ]
+        },
+        {
+            "answer": "C",
+            "res": "A folha dupla consiste de dois retângulos de 12 cm por 10 cm, que têm a dobra como um lado comum de 10 cm. Ao cortar a folha dupla, obtemos três retângulos, dois deles de medida 6 cm por 10 cm e um maior formado de 12 cm por 10 cm. A área de cada um dos retângulos  de medida 6 cm por 10 cm é 6 x 10 = 60 cm² e a do retângulo de 12 cm por 10 cm é 12 x 10 = 120 cm². Logo a área do maior pedaço é 120 cm²",
+            "enun": "Uma folha de papel retangular, de 10 cm de largura por 24 cm de comprimento, foi dobrada de forma a obter uma folha dupla, de 10 cm de largura por 12 cm de comprimento. Em seguida, a folha dobrada foi cortada ao meio, paralelamente à dobra, obtendo-se assim três pedaços retangulares. Qual é a área do maior desses pedaços?",
+            "alter": [
+                "30 cm²",
+                "60 cm²",
+                "120 cm²",
+                "180 cm²",
+                "240 cm²"
+            ]
+        },
+        {
+            "answer": "D",
+            "res": "Como uma hora tem 60 minutos, em um minuto os amigos percorrem 6/60 = 0,1 km, que é o mesmo que 100 m. Se A e B indicam a posição dos dois amigos um minuto após a partida, então no triângulo PAB temos PA = PB = 100 m. Isto quer dizer que o triângulo PAB é isósceles, logo os ângulos Â e B são iguais. Como a soma dos ângulos de um triângulo qualquer é 180° e P = 60°, segue que Â + B = 180° - 60° = 120°. Como estes dois ângulos são iguais, cada um deles mede 120°/2 = 60°. Logo o triângulo PAB tem todos seus ângulos iguais a 60°, ou seja, ele é equilátero. Assim temos AB = PA = PB = 100 m.",
+            "enun": "Dois amigos partem ao mesmo tempo do ponto P e se afastam em direções que formam um ângulo de 60°, conforme mostra a figura. Eles caminham em linha reta, ambos com velocidade de 6 km/h. Qual será a distância entre eles 1 minuto após a partida?",
+            "alter": [
+                "80 m",
+                "90 m",
+                "95 m",
+                "100 m",
+                "105 m"
+            ]
+        },
+        {
+            "answer": "C",
+            "res": "As amostras cujo percentual de álcool é maior que o de gasolina são aquelas que contêm mais de 50% de álcool. No gráfico, estas amostras correspondem àquelas cuja barra horizontal ultrapassa a marca de 50%, que são as amostras 1, 2 e 3.",
+            "enun": "Para testar a qualidade de um combustível composto apenas de gasolina e álcool, uma empresa recolheu oito amostras em vários postos de gasolina. Para cada amostra foi determinado o percentual de álcool e o resultado é mostrado no gráfico abaixo. Em quantas dessas amostras o percentual de álcool é maior que o percentual de gasolina?",
+            "alter": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ]
+        },
+        {
+            "answer": "E",
+            "res": "No quadro temos a equação 2x² - bx + 60 = 0, onde b denota o número apagado. Como x = 6 é uma das raízes desta equação, segue que 2 x 6² – 6b + 60 = 0, donde 132 – 6b = 0, ou seja, b = 132/6 = 22.",
+            "enun": "Mariana entrou na sala e viu no quadro-negro algumas anotações da aula anterior, parcialmente apagadas, conforme a figura. Qual número foi apagado na linha de cima do quadro-negro?",
+            "alter": [
+                "11",
+                "12",
+                "13",
+                "20",
+                "22"
+            ]
+        },
+        {
+            "answer": "D",
+            "res": "Os múltiplos de 3 maiores do que 1 e menores do que 2005 são os números 3 x 1, 3 x 2, 3 x 3,..., 3 x n onde 3 x n é o maior múltiplo de 3 menor do que 2005. Usando o algoritmo da divisão, podemos escrever 2005 = 3 x 668 + 1 e segue que n = 668 .",
+            "enun": "Quantos números inteiros, múltiplos de 3, existem entre 1 e 2 005?",
+            "alter": [
+                "664",
+                "665",
+                "667",
+                "668",
+                "669"
+            ]
+        },
+        {
+            "answer": "C",
+            "res": "Como a quantidade de cálcio consumida é diretamente proporcional à quantidade de leite ingerida, podemos montar a seguinte regra de três:",
+            "enun": "Os médicos recomendam, para um adulto, 800 mg de cálcio por dia. Sabe-se que 200 ml de leite contêm 296 mg de cálcio. Quando um adulto bebe 200 ml de leite, qual é o percentual da dose diária recomendada de cálcio que ele está ingerindo?",
+            "alter": [
+                "17%",
+                "27%",
+                "37%",
+                "47%",
+                "57%"
+            ]
+        },
+        {
+            "answer": "B",
+            "res": "Para calcular os possíveis comprimentos dos caminhos que a formiga pode percorrer, é necessário saber o comprimento da diagonal dos retângulos da malha. Para isto usa-se o Teorema de Pitágoras, que diz que em um triângulo retângulo de hipotenusa a e catetos b e c temos a2 = b2 + c2. Se d é a diagonal que queremos calcular então d2 = 32 + 42 = 25, donde d = 5. Note agora que existem apenas quatro opções de caminhos que a formiga pode escolher para ir de A a B: (i) Caminhos que não passam pelas diagonais: Qualquer caminho deste tipo passa por pelo menos três lados de comprimento 4cm e dois lados de comprimento 3 cm. Neste caso, o menor caminho tem comprimento 3 x 4 + 2 x 3 = 12 + 6 = 18 cm. (ii) Caminhos que passam por apenas uma diagonal: Todo caminho deste tipo passará no mínimo por um lado de comprimento 3 cm e dois de comprimento 4 cm. Portanto, neste caso, o menor caminho será de 5 + 3 + 2 x 4 = 16 cm. (iii) Caminhos que passam por exatamente duas diagonais: Note que existe um caminho que passa apenas por duas diagonais e por um lado de comprimento 4; o comprimento deste caminho é 5 x 2 + 4 = 14 cm. Por outro lado, qualquer caminho que passe por duas diagonais terá que passar por um lado de comprimento 4 cm, logo seu comprimento será no mínimo igual a 14 cm. Logo, neste caso, o menor caminho tem comprimento 14 cm. (iv) Caminhos que passam por mais de duas diagonais : Qualquer caminho deste tipo terá comprimento no mínimo 15 cm. Portanto a resposta é 14 cm.",
+            "enun": "Uma formiga está no ponto A da malha mostrada na figura. A malha é formada por retângulos de 3 cm de largura por 4 cm de comprimento. A formiga só pode caminhar sobre os lados ou sobre as diagonais dos retângulos. Qual é a menor distância que a formiga deve percorrer para ir de A até B?",
+            "alter": [
+                "12 cm",
+                "14 cm",
+                "15 cm",
+                "17 cm",
+                "18 cm"
+            ]
+        },
+        {
+            "answer": "A",
+            "res": "Os números nos bilhetes comprados por Marcelo são da forma 777X, 77X7, 7X77 ou X777, onde X representa algum dos oito algarismos 1, 2, 3, 4, 5, 6, 8 e 9. Em cada um desses casos, há 8 possibilidades para os números dos bilhetes. Por exemplo, no primeiro caso, temos os seguintes oito números: 7771, 7772, 7773, 7774, 7775, 7776, 7778 e 7779. Portanto, o número de bilhetes comprados por Marcelo é 8 x 4 = 32.",
+            "enun": "Os bilhetes de uma rifa são numerados de 1 000 a 9 999. Marcelo comprou todos os bilhetes nos quais o algarismo sete aparece exatamente três vezes e o zero não aparece. Quantos bilhetes Marcelo comprou?",
+            "alter": [
+                "32",
+                "36",
+                "45",
+                "46",
+                "48"
+            ]
+        },
+        {
+            "answer": "A",
+            "res": "De acordo com o enunciado, a expressão que fornece a temperatura Celsius ( C ) em função da temperatura Fahrenheit ( F ) é C = 5/9 (F - 32) (*). Essa expressão é da forma C = aF + b, onde a = 5/9 e b = - 160/9. Logo, seu gráfico é uma reta, excluindo assimas opções (D) e (E). Esta reta corta o eixo oFno ponto de ordenada C = 0, o que acontece quando F = 32, de acordo com a expressão (*). Isto elimina a opção (C). Além disso, como a = 5/9 > 0, a inclinação da reta é positiva, o que elimina a opção (B).",
+            "enun": "No Brasil, usa-se a escala Celsius para medir temperaturas e, em outros países, usa-se a escala Fahrenheit. Para converter uma temperatura da escala Fahrenheit para a Celsius , subtrai-se 32 do valor da temperatura em graus Fahrenheit e multiplica-se o resultado por 5/9. Qual dos gráficos representa a relação entre as medidas de uma mesma temperatura em graus Fahrenheit (indicados por oF) e em graus Celsius (indicados por oC)?",
+            "alter": [
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "answer": "B",
+            "res": "Temos 12 kg de farinha = 12  ́ 1 kg de farinha, 54 ovos = 9  ́ 6 ovos e 3,6 kg de manteiga = 3600 g de manteiga = 18  ́ 200 gramas de manteiga. Portanto, a quantidade de farinha foi multiplicada por 12, a de manteiga por 18 e a de ovos apenas por 9. Logo, o padeiro poderá fazer no máximo 24 x 9 = 216 pães.",
+            "enun": "Para fazer 24 pães, um padeiro usa exatamente 1 quilo de farinha de trigo, 6 ovos e 200 gramas de manteiga. Qual é o maior número de pães que ele conseguirá fazer com 12 quilos de farinha, 54 ovos e 3,6 quilos de manteiga?",
+            "alter": [
+                "200",
+                "216",
+                "228",
+                "300",
+                "432"
+            ]
+        },
+        {
+            "answer": "A",
+            "res": "O padrão usado para cobrir a parede é formado por mosaicos constituídos de nove azulejos, como na figura. Em cada mosaico, a área preta corresponde à metade de quatro quadrados, ou seja, a dois quadrados. Deste modo, a área preta é 2/9 da área do mosaico e a área branca é 1 - 2/9 = 7/9 da área do mosaico. A parede tem 9 m = 900 cm de comprimento e 3 m = 300 cm de altura. Como 900/30 = 30 e 300/30 = 10, a parede pode ser coberta por 30 x 10 = 300 mosaicos, cada um com área 30 x 30 = 900 cm². Deste modo, a área da parede coberta com a cor branca é 7/9 x 900 x 300 = 210000 cm² = 21 x 10000 cm2 = 21 m².",
+            "enun": "Uma parede de 3 metros de altura por 9 metros de comprimento foi inteiramente coberta com azulejos quadrados de 10 cm de lado. Foram usados dois tipos de azulejos: um totalmente branco e o outro preto e branco. A figura representa o padrão usado, a partir do canto inferior esquerdo da parede. Qual é a área da parede coberta com a cor branca?",
+            "alter": [
+                "21 m²",
+                "22 m²",
+                "23 m²",
+                "24 m²",
+                "25 m²"
+            ]
+        },
+        {
+            "answer": "A",
+            "res": "Denotemos por c o comprimento e por l a largura do terreno. Então o perímetro do terreno é 2 x (c + /) e sua área é c x /. Já sabemos a área do terreno, que é 60 m², donde c x / = 60. O enunciado nos diz que foram usados 64 m de arame para uma cerca de dois fios, e assim o perímetro do terreno é 64 / 2 = 32 m.Logo 2 x (c + /) = 32 e concluímos que c + / = 16. Segue que c e l são dois números cuja soma é 16 e o produto é 60. É facil ver que esses números são 6 e 10. Assim, a diferença pedida é 10 - 6 = 4 m. Mais geralmente, sabemos que o problema de determinar dois números reais dos quais se conhece a soma s e o produto p equivale a achar as soluções da equação x² - sx + p = 0.As raízes reais desta equação (caso existam) serão os números procurados. No nosso caso, temos que c e l são raízes de x² - 16x + 60 = 0.  Usando a fórmula habitual x = (16±√16²-4x60)/2 = (16±4)/2 obtemos as raízes 6 e 10.",
+            "enun": "Para cercar um terreno retangular de 60 metros quadrados com uma cerca formada por dois fios de arame foram usados 64 metros de arame. Qual é a diferença entre o comprimento e a largura do terreno?",
+            "alter": [
+                "4 m",
+                "7 m",
+                "11 m",
+                "17 m",
+                "28 m"
+            ]
+        },
+        {
+            "answer": "C",
+            "res": "Lembre que o comprimento de uma circunferência de raio r é 2pr . Logo, o comprimento de cada trecho circular é 10p metros, e como são dois trechos circulares, a parte circular da pista tem comprimento igual a 2 x 10p = 20p metros. A soma dos comprimentos dos dois trechos retos é 2c. Para satisfazer as condições da questão, devemos ter 2c o mais próximo possível de 20p, o que é o mesmo que dizer que devemos ter c o mais próximo possível de 10p. Como 3,14 < p < 3,15 segue 31,4 < 10p < 31,5. Dentre as alternativas, a melhor aproximação para 10p é então c = 30.",
+            "enun": "Uma escola resolveu construir uma pista de corrida, formada por dois trechos retos de comprimento C e dois trechos semicirculares de raio igual a 10 metros, conforme indicado na figura (não se leva em conta a largura da pista). Os alunos da escola propuseram cinco valores para C: 20 m, 25 m, 30 m, 35 m e 40 m. Para qual desses valores de C a soma dos comprimentos dos trechos retos está mais próxima da soma dos comprimentos dos trechos semicirculares?",
+            "alter": [
+                "20 m",
+                "25 m",
+                "30 m",
+                "35 m",
+                "40 m"
+            ]
+        },
+        {
+            "answer": "D",
+            "res": "Para que Manoel vá ao rio o menor número de vezes possível, ele deve sempre encher totalmente a lata. Conforme mostra a figura, a lata tem a forma de um paralelepípedo reto de base quadrada. Logo o volume da lata é (área da base) × (altura) =30 x 30 x 40 = 36000 cm³,ou seja, 0,036 m3. A caixa d’água tem 2 m³, logo nela cabem (2/0,036) = (2x10³)/36 = 55,555... latas d’água. Como a cada lata cheia corresponde uma ida ao rio, concluímos que Manoel precisará ir no mínimo 56 vezes ao rio para encher a sua caixa d’água.",
+            "enun": "Na casa de Manoel há uma caixa d’água vazia com capacidade de 2 metros cúbicos. Manoel vai encher a caixa trazendo água de um rio próximo, em uma lata cuja base é um quadrado de lado 30 cm e cuja altura é 40 cm, como na figura. No mínimo, quantas vezes Manoel precisará ir ao rio até encher completamente a caixa d’água?",
+            "alter": [
+                "53",
+                "54",
+                "55",
+                "56",
+                "57"
+            ]
+        },
+        {
+            "answer": "D",
+            "res": "Se v é a velocidade desenvolvida por Ana, então a velocidade desenvolvida por Beatriz é v + 10. No momento em que as duas se cruzam, a distância percorrida por Ana é 150 - 30 = 120 km e a percorrida por Beatriz é 150 + 30 = 180 km. Como tempo = distância/velocidade e o tempo gasto pelas duas até o momento do encontro é o mesmo, temos = 120/v = 180/(v+10). Logo 120 (v + 10) = 180 v, donde v = 20 km/h.",
+            "enun": "Partindo do mesmo ponto, Ana e Beatriz começam, ao mesmo tempo, uma corrida de bicicleta de ida e volta entre duas cidades distantes 150 km uma da outra. Ana e Beatriz mantêm velocidades constantes e Beatriz percorre, a cada hora, 10 km a mais que Ana. Beatriz completa o percurso de ida e inicia o de volta. Elas se cruzam no momento em que Beatriz completa 30 km no percurso de volta. Qual é a velocidade de Ana?",
+            "alter": [
+                "5 km/h",
+                "10 km/h",
+                "15 km/h",
+                "20 km/h",
+                "25 km/h"
+            ]
+        },
+        {
+            "answer": "B",
+            "res": "Considere o triângulo retângulo cuja hipotenusa é a escada que mede 25 m, um dos catetos é o segmento ligando o pé da escada à base do edifício, que mede 7 m, e o outro cateto é o segmento da parede do edifício que une o topo da escada ao solo. O comprimento x deste último cateto pode ser calculado imediatamente a partir do Teorema de Pitágoras: temos 25² = 72 + x² e obtemos x = 24 m. Quando o topo da escada escorrega 4 m para baixo, obtemos um novo triângulo retângulo, cuja hipotenusa mede 25 m e um dos catetos mede 24 - 4 = 20 m. O outro cateto y deste triângulo é determinado, outra vez, pelo Teorema de Pitágoras: temos 252 = 202 + y2 e segue que y = 15 m. Logo, o deslocamento do pé da escada será de 15 - 7 = 8 m.",
+            "enun": "O topo de uma escada de 25 m de comprimento está encostado na parede vertical de um edifício. O pé da escada está a 7 m de distância da base do edifício, como na figura. Se o topo da escada escorregar 4 m para baixo ao longo da parede, qual será o deslocamento do pé da escada?",
+            "alter": [
+                "4 m",
+                "8 m",
+                "9 m",
+                "13 m",
+                "15 m"
+            ]
+        },
+        {
+            "answer": "D",
+            "res": "O perímetro p é dado por p = AB + BC + CG + AG. Como já conhecemos AB e BC, o problema é calcular CG e AG. Para isto, precisamos determinar a medida de outros segmentos na figura, e começamos calculando a medida de CD, DE e AE. Prolongando DE até o ponto H, obtemos os retângulos AHEF e BCDH. Como num retângulo os lados opostos são iguais, temos EH = AF = 4, AH = EF = 3 e DH = BC = 6. Logo CD = BH = AB - AH = 8 - 3 = 5 e DE = DH - EH = BC - AF = 6 - 4 = 2. Para determinar AE, note que o triângulo AEF é retângulo de catetos AF = 4, EF = 3 e hipotenusa AE; doTeorema de Pitágoras segue que AE = √(3² + 5²) = 5. . Vamos agora calcular EG e DG. Note que os triângulos AEF e DEG são ambos retângulos e os seus ângulos em Â e Ê são iguais, pois os lados AF e DE são paralelos. Logo estes triângulos são semelhantes. Temos então AE/EG = AF/DE = EF/DG, ou seja, 5/EG = 4/2 = 3/DG . Assim EG = 2,5 e DG = 1,5, donde CG = CD - DG = 5 - 1,5 = 3,5. Agora podemos calcular o perímetro pedido: p = AB + BC + CG + GA = AB + BC + CG + GE + EA = 8 + 6 + 3,5 + 2,5 + 5 = 25 cm.",
+            "enun": "A figura mostra um polígono ABCDEF no qual dois lados consecutivos quaisquer são perpendiculares. O ponto G está sobre o lado CD e sobre a reta que passa por A e E. Os comprimentos de alguns lados estão indicados em centímetros. Qual é o perímetro do polígono ABCG ?",
+            "alter": [
+                "22 cm",
+                "23 cm",
+                "24 cm",
+                "25 cm",
+                "26 cm"
+            ]
+        },
+        {
+            "answer": "B",
+            "res": "Como há 7 possíveis adversários para o Brasil, todos com a mesma chance de serem escolhidos, a probabilidade do adversário do Brasil na primeira rodada ser a Argentina é 1/7.",
+            "enun": "Brasil e Argentina participam de um campeonato internacional de futebol no qual competem oito seleções. Na primeira rodada serão realizadas quatro partidas, nas quais os adversários são escolhidos por sorteio. Qual é a probabilidade de Brasil e Argentina se enfrentarem na primeira rodada?",
+            "alter": [
+                "1/8",
+                "1/7",
+                "1/6",
+                "1/5",
+                "1/4"
+            ]
+        },
+        {
+            "answer": "E",
+            "res": "Acompanhe a solução com a ajuda da figura a seguir, que ilustra as afirmativas de Regina, Paulo e Iracema. (i) Se Regina está certa, então Paulo e Iracema estão errados. Os números que satisfazem a afirmação de Regina mas não satisfazem a afirmação de Paulo são 101, 102, 103, 104 e 105; note que estes números também não satisfazem a afirmação de Iracema. Neste caso temos 5 possibilidades para o número de bolas na caixa. (ii) Se Paulo está certo, então Regina e Iracema estão erradas. O único número que satisfaz as opções de Paulo e não satisfaz as de Regina e Iracema é 120. Aqui, temos apenas uma possibilidade para o número de bolas na caixa. (iii) Se Iracema está certa, então Paulo e Regina estão errados. Os números que satisfazem a afirmação de Iracema mas não satisfazem a afirmação de Paulo são 130, 131, 132, 133, 134, 135, 136, 137, 138 e 139; note que estes números também não satisfazem a afirmação de Regina. Neste caso, temos 10 possibilidades para o número de bolas na caixa. Finalmente, o número total de possibilidades é a soma do número de possibilidades nos casos (i), (ii) e (iii), que é 5 + 1 + 10 = 16.",
+            "enun": "Regina, Paulo e Iracema tentam adivinhar quantas bolas estão dentro de uma caixa fechada. Eles já sabem que este número é maior que 100 e menor que 140. Eles fazem as seguintes afirmações:    · Regina: Na caixa há mais de 100 bolas e menos de 120 bolas.    · Paulo: Na caixa há mais de 105 bolas e menos de 130 bolas.    · Iracema: Na caixa há mais de 120 bolas e menos de 140 bolas. Sabe-se que apenas uma dessas afirmações é correta. Quantos são os possíveis valores para o número de bolas dentro da caixa?",
+            "alter": [
+                "1",
+                "5",
+                "11",
+                "13",
+                "16"
+            ]
+        }
+    ]
+}
