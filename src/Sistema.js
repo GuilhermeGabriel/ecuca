@@ -13,15 +13,27 @@ class FirebaseSistema {
             .on('value', onSnapshot)
     }
 
-    createNewUser(uid, name, email, photo) {
-        return firestore()
+    async createNewUser(uid, name, email, photo) {
+        let city = ''
+        let region = ''
+
+        await fetch('http://ip-api.com/json')
+            .then(res => res.json())
+            .then(result => {
+                city = result.city
+                region = result.region
+            })
+
+        await firestore()
             .collection('users')
             .doc(uid)
             .set({
                 uid: uid,
                 name: name,
                 email: email,
-                photo: photo
+                photo: photo,
+                city: city,
+                region: region
             })
     }
 

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { StackActions, NavigationActions } from 'react-navigation'
 import firebase from '../FirebaseConnection';
+import analytics from '@react-native-firebase/analytics';
 
 export default class Preload extends Component {
     static navigationOptions = {
@@ -12,6 +13,14 @@ export default class Preload extends Component {
         super(props);
         this.state = {
         }
+
+        this.initAnalytics()
+    }
+
+    async initAnalytics() {
+        await analytics().setAnalyticsCollectionEnabled(true)
+        await analytics().logAppOpen()
+        await analytics().logEvent('openTheApp')
     }
 
     componentDidMount() {

@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "@react-native-community/google-signin": "^4.0.0",
-    "@react-native-firebase/app": "^6.4.0",
-    "@react-native-firebase/auth": "^6.4.0",
-    "@react-native-firebase/firestore": "^6.4.0",
+    "@react-native-firebase/analytics": "^6.7.1",
+    "@react-native-firebase/app": "^6.7.1",
+    "@react-native-firebase/auth": "^6.7.1",
+    "@react-native-firebase/firestore": "^6.7.1",
+    "add": "^2.0.6",
     "firebase": "^7.14.1",
     "install": "^0.13.0",
     "react": "16.11.0",
@@ -34,7 +36,8 @@
     "react-navigation": "^3.0.0",
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "yarn": "^1.22.4"
   },
   "devDependencies": {
     "react": "~16.9.0",

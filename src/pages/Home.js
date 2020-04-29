@@ -48,17 +48,18 @@ class Home extends Component {
                 }
 
 
-                /* if (change.type == 'modified') {
-                     for (ss of this.state.simulados) {
-                         if (ss.id === change.doc.data().id) {
-                             const sSim = this.state.simulados
-                             const index = sSim.indexOf(ss)
-                             sSim[index] = change.doc.data()
-                             this.setState({ simulados: sSim })
-                         }
-                     }
-                 }*/
+                if (change.type == 'modified') {
+                    alert(change.doc.data().id)
 
+                    /*for (ss of this.state.simulados) {
+                        if (ss.id === change.doc.data().id) {
+                            const sSim = this.state.simulados
+                            const index = sSim.indexOf(ss)
+                            sSim[index] = change.doc.data()
+                            this.setState({ simulados: sSim })
+                        }
+                    }*/
+                }
             })
             this.setState({
                 simulados: [...sim, ...this.state.simulados,],
