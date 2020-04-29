@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Linking } from 'react-native';
 import firebase from '../FirebaseConnection';
 import {
     GoogleSignin,
@@ -104,19 +104,31 @@ export class Login extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.title}>Bem-Vindo ao Ecuca</Text>
-                {/*this.state.loggedIn == true ? <Text>Logado</Text> : <Text>Deslogado</Text>*/}
+                <View style={styles.containerWelcome}>
+                    <Text style={styles.title}>Bem-Vindo ao Ecuca</Text>
+                    {/*this.state.loggedIn == true ? <Text>Logado</Text> : <Text>Deslogado</Text>*/}
 
-                <TouchableOpacity style={styles.loginBtn} onPress={this.signIn}>
-                    <Text style={styles.loginTxt}>Vamos lá</Text>
-                </TouchableOpacity>
-            </View >
+                    <TouchableOpacity style={styles.loginBtn} onPress={this.signIn}>
+                        <Text style={styles.loginTxt}>Vamos lá</Text>
+                    </TouchableOpacity>
+                </View >
+                <Text style={{ textAlign: 'center' }}>
+                    Ao continuar, você concorda com nossos
+                    </Text>
+                <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
+                    <Text style={styles.termosInfo} onPress={() => Linking.openURL('https://sites.google.com/view/terms-e-condicoes/home')}>Termos de Serviço  e</Text>
+                    <Text style={styles.termosInfo} onPress={() => Linking.openURL('https://sites.google.com/view/politicacontagemappob/home')}>Politica de Privacidade</Text>
+                </View>
+            </View>
         );
     }
 }
 
 const styles = StyleSheet.create({
     container: {
+        flex: 1
+    },
+    containerWelcome: {
         margin: 20,
         flex: 1,
         alignItems: 'center',
@@ -126,6 +138,11 @@ const styles = StyleSheet.create({
         fontSize: 32,
         fontWeight: 'bold',
         marginBottom: 16
+    },
+    termosInfo: {
+        fontSize: 14,
+        paddingHorizontal: 4,
+        marginBottom: 24
     },
     loginBtn: {
         width: 180,
