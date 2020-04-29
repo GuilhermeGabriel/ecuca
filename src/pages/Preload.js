@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { StackActions, NavigationActions } from 'react-navigation'
-import { GoogleSignin } from '@react-native-community/google-signin';
+import firebase from '../FirebaseConnection';
 
 export default class Preload extends Component {
     static navigationOptions = {
@@ -14,34 +14,28 @@ export default class Preload extends Component {
         }
     }
 
-    getCurrentUserInfo = async () => {
-        try {
-            const userInfo = await GoogleSignin.signInSilently();
-            const stackAction = StackActions.reset({
-                index: 0,
-                actions: [
-                    NavigationActions.navigate({ routeName: 'Home', params: { name: userInfo.user.givenName } })
-                ]
-            })
-            this.props.navigation.dispatch(stackAction);
-        } catch (error) {
-            const stackAction = StackActions.reset({
-                index: 0,
-                actions: [
-                    NavigationActions.navigate({ routeName: 'Login' })
-                ]
-            })
-            this.props.navigation.dispatch(stackAction);
-        }
-    };
-
     componentDidMount() {
-        GoogleSignin.configure({
-            webClientId: '92718398150-mnle4efvao8iim164mf0e0bveg49ql0o.apps.googleusercontent.com',
-            offlineAccess: true,
-        });
+        firebase.auth().onAuthStateChanged(user => {
+            if (user != null) {
+                const stackAction = StackActions.reset({
+                    index: 0,
+                    actions: [
+                        NavigationActions.navigate({ routeName: 'Home', params: { name: user.displayName.split(' ')[0] } })
+                    ]
+                })
 
-        this.getCurrentUserInfo();
+                this.props.navigation.dispatch(stackAction);
+            } else {
+                const stackAction = StackActions.reset({
+                    index: 0,
+                    actions: [
+                        NavigationActions.navigate({ routeName: 'Login' })
+                    ]
+                })
+
+                this.props.navigation.dispatch(stackAction);
+            }
+        })
     }
 
     render() {

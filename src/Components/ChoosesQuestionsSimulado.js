@@ -43,7 +43,16 @@ class ItemAlternativa extends Component {
 
 Resolucao = (props) => {
     if (!props.showResolutionView) return <View></View>
-    if (props.isPremium) {
+
+    let isPremium = false
+
+    if (props.actualQuestion < 3) {
+        isPremium = true
+    } else {
+        isPremium = props.isPremium
+    }
+
+    if (isPremium) {
         return (
             <View>
                 <Text style={styles.titleResolucao}>Resolução:</Text>
@@ -158,6 +167,7 @@ class ChoosesQuestionsSimulado extends Component {
                 <View style={styles.divisor} />
 
                 <Resolucao
+                    actualQuestion={this.props.actualQuestion}
                     actualAnswer={this.props.actualAnswer}
                     res={this.props.res}
                     imgR={this.props.imgR}

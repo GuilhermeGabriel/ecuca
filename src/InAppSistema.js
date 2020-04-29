@@ -21,6 +21,7 @@ class InAppSistema {
     async init() {
         await RNIap.initConnection()
         await firebase.auth().onAuthStateChanged(user => {
+            if (user == null) return
             this.uid = user.uid
         })
     }
@@ -34,9 +35,14 @@ class InAppSistema {
             const purchases = await RNIap.getAvailablePurchases()
             const filtered = purchases.filter(item => item.productId == 'ecuca_subs_pro')
 
-            if (filtered[0].autoRenewingAndroid == false || filtered.length == 0) {
+            if (filtered.length == 0) {
                 Sistema.setUserToPremium(this.uid, false)
             }
+
+            if (filtered[0].autoRenewingAndroid == false) {
+                Sistema.setUserToPremium(this.uid, false)
+            }
+
         } catch (err) {
             Alert.alert(err.message);
         }

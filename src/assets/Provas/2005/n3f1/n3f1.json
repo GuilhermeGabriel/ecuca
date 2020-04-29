@@ -110,7 +110,7 @@
         },
         {
             "answer": "A",
-            "res": "De acordo com o enunciado, a expressão que fornece a temperatura Celsius ( C ) em função da temperatura Fahrenheit ( F ) é C = 5/9 (F - 32) (*). Essa expressão é da forma C = aF + b, onde a = 5/9 e b = - 160/9. Logo, seu gráfico é uma reta, excluindo assimas opções (D) e (E). Esta reta corta o eixo oFno ponto de ordenada C = 0, o que acontece quando F = 32, de acordo com a expressão (*). Isto elimina a opção (C). Além disso, como a = 5/9 > 0, a inclinação da reta é positiva, o que elimina a opção (B).",
+            "res": "De acordo com o enunciado, a expressão que fornece a temperatura Celsius ( C ) em função da temperatura Fahrenheit ( F ) é C = 5/9 (F - 32) (*). Essa expressão é da forma C = aF + b, onde a = 5/9 e b = - 160/9. Logo, seu gráfico é uma reta, excluindo assim as opções (D) e (E). Esta reta corta o eixo ºF no ponto de ordenada C = 0, o que acontece quando F = 32, de acordo com a expressão (*). Isto elimina a opção (C). Além disso, como a = 5/9 > 0, a inclinação da reta é positiva, o que elimina a opção (B).",
             "enun": "No Brasil, usa-se a escala Celsius para medir temperaturas e, em outros países, usa-se a escala Fahrenheit. Para converter uma temperatura da escala Fahrenheit para a Celsius , subtrai-se 32 do valor da temperatura em graus Fahrenheit e multiplica-se o resultado por 5/9. Qual dos gráficos representa a relação entre as medidas de uma mesma temperatura em graus Fahrenheit (indicados por oF) e em graus Celsius (indicados por oC)?",
             "alter": [
                 "",

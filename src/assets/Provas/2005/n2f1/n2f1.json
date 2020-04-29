@@ -110,7 +110,7 @@
         },
         {
             "answer": "E",
-            "res": "Às 12h 30min o ponteiro dos minutos deu meia volta no relógio a partir do número 12 do mostrador, ou seja, percorreu 360°/2 = 180o. Os números 1, 2, 3, ... ,12 do mostrador do relógio dividem a circunferência em doze ângulos iguais, cada um com 360°/12 = 30° . Logo, a cada hora, o ponteiro das horas (o menor) percorre um ângulo de 30° ; em meia-hora este ponteiro percorre então 30°/2 = 15°. Logo, o ângulo formado pelos dois ponteiros é 180° - 15o = 165°.",
+            "res": "Às 12h 30min o ponteiro dos minutos deu meia volta no relógio a partir do número 12 do mostrador, ou seja, percorreu 360º  / 2 = 180º. Os números 1, 2, 3, ... ,12 do mostrador do relógio dividem a circunferência em doze ângulos iguais, cada um com 360º / 12 = 30º . Logo, a cada hora, o ponteiro das horas (o menor) percorre um ângulo de 30º ; em meia-hora este ponteiro percorre então 30º  / 2 = 15º. Logo, o ângulo formado pelos dois ponteiros é 180º - 15º = 165º.",
             "enun": "Qual é a medida do menor ângulo formado pelos ponteiros de um relógio quando ele marca 12 horas e 30 minutos?",
             "alter": [
                 "90°",

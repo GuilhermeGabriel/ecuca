@@ -13,6 +13,5 @@ export const Images = {
 
     r4: require('./n1f1imgs/r5.png'),
     r7: require('./n1f1imgs/r8.png'),
-    r11: require('./n1f1imgs/r12.png'),
-    r13: require('./n1f1imgs/r14.png'),
+    r11: require('./n1f1imgs/r12.png')
 }

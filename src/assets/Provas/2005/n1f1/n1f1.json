@@ -27,7 +27,7 @@
         {
             "answer": "A",
             "res": "Denotemos por a o numerador da fração que aparece no quadro negro. Temos a/3 = 5, donde a = 3 x 5 = 15. Por outro lado,a = 2 x 12 - x onde x representa o número apagado. Portanto 2 x 12 - x = 15 , ou seja 24 - x = 15 . Logo x = 9.",
-            "enun": "Denotemos por a o numerador da fração que aparece no quadro negro. Temos a/3 = 5, donde a = 3 x 5 = 15. Por outro lado,a = 2 x 12 - x onde x representa o número apagado. Portanto 2 x 12 - x = 15 , ou seja 24 - x = 15 . Logo x = 9. ",
+            "enun": "Margarida viu no quadro-negro algumas anotações da aula anterior, um pouco apagadas, conforme mostra a figura. Qual é o número que foi apagado?",
             "alter": [
                 "9",
                 "10",
@@ -122,7 +122,7 @@
         },
         {
             "answer": "C",
-            "res": "Os números (de 1 a 12) no mostrador do relógio dividem a circunferência em 12 partes iguais, e a cada uma corresponde um ângulo central de 360o  ̧12 = 30o. Quando o relógio marca 2 horas, o ângulo formado pelos ponteiros corresponde à soma de dois ângulos de 30o cada, logo é igual a 2 x 30o = 60o.",
+            "res": "Os números (de 1 a 12) no mostrador do relógio dividem a circunferência em 12 partes iguais, e a cada uma corresponde um ângulo central de 360º / 12 = 30º. Quando o relógio marca 2 horas, o ângulo formado pelos ponteiros corresponde à soma de dois ângulos de 30º cada, logo é igual a 2 x 30º = 60º.",
             "enun": "Qual é a medida do menor ângulo formado pelos ponteiros de um relógio quando ele marca 2 horas?",
             "alter": [
                 "30º",
@@ -134,8 +134,8 @@
         },
         {
             "answer": "D",
-            "res": "Lembre que a área de um quadrado de lado L é igual a L² 2 ; deste modo, se conhecemos a área a de um quadrado então seu lado é √a. A área da folha cortada é a soma das áreas dos quadrados menores, que é 16 +5 x 4 + 13 x 1 = 49 cm² . Logo, antes de ser cortada, a folha tinha lado √49 = 7cm. Outra solução deste problema é notar que os quadrados do enunciado podem ser agrupados de modo a formar um quadrado maior de lado 7, conforme indicado no desenho.",
-            "enun": "Uma folha quadrada foi cortada em quadrados menores da seguinte maneira: um quadrado de área 16 cm2, cinco quadrados de área 4 cm2 cada um e treze quadrados de área 1 cm² cada um. Qual era a medida do lado da folha, antes de ela ser cortada?",
+            "res": "Lembre que a área de um quadrado de lado L é igual a L²; deste modo, se conhecemos a área a de um quadrado então seu lado é √a. A área da folha cortada é a soma das áreas dos quadrados menores, que é 16 + 5 x 4 + 13 x 1 = 49 cm² . Logo, antes de ser cortada, a folha tinha lado √49 = 7cm. Outra solução deste problema é notar que os quadrados do enunciado podem ser agrupados de modo a formar um quadrado maior de lado 7, conforme indicado no desenho.",
+            "enun": "Uma folha quadrada foi cortada em quadrados menores da seguinte maneira: um quadrado de área 16 cm², cinco quadrados de área 4 cm² cada um e treze quadrados de área 1 cm² cada um. Qual era a medida do lado da folha, antes de ela ser cortada?",
             "alter": [
                 "3 cm",
                 "4 cm",
@@ -158,7 +158,7 @@
         },
         {
             "answer": "E",
-            "res": "Como os números envolvidos são pequenos, a questão pode ser resolvida efetuando os cálculos indicados e verificando a paridade do resultado: (A) 7 x 5 x 11 x 13 x 2 = 10010 que é par (B) (2005 - 2003) x (2004 + 2003) = 2 x 4007 = 8014 que é par (C) 7 + 9 + 11+ 13 + 15 + 17 = 72 que é par (D) 52 + 32 = 25 + 9 = 34 que é par (E) 3 x 5 + 7 x 9 + 11 x 13 = 15 + 63 + 143 = 221 que é ímpar Por outro lado, usando seguintes fatos sobre números inteiros par + par = par par + ímpar = ímpar ímpar + ímpar = par (qualquer número) x par = par. ímpar x ímpar = ímpar podemos argumentar como se segue. Os resultados de (A) e (B) são pares, pois ambos contêm o fator 2. Os resultados de (C) e (D) são pares pois são somas de um número par de parcelas ímpares. Finalmente o resultado de (E) é ímpar pois é a soma de um número ímpar de parcelas ímpares. Note que este argumento não depende do fato dos números envolvidos serem grandes ou pequenos.",
+            "res": "Como os números envolvidos são pequenos, a questão pode ser resolvida efetuando os cálculos indicados e verificando a paridade do resultado: (A) 7 x 5 x 11 x 13 x 2 = 10010 que é par (B) (2005 - 2003) x (2004 + 2003) = 2 x 4007 = 8014 que é par (C) 7 + 9 + 11+ 13 + 15 + 17 = 72 que é par (D) 52 + 32 = 25 + 9 = 34 que é par (E) 3 x 5 + 7 x 9 + 11 x 13 = 15 + 63 + 143 = 221 que é ímpar Por outro lado, usando seguintes fatos sobre números inteiros par + par = par; par + ímpar = ímpar; ímpar + ímpar = par; (qualquer número) x par = par. ímpar x ímpar = ímpar. Podemos argumentar como se segue. Os resultados de (A) e (B) são pares, pois ambos contêm o fator 2. Os resultados de (C) e (D) são pares pois são somas de um número par de parcelas ímpares. Finalmente o resultado de (E) é ímpar pois é a soma de um número ímpar de parcelas ímpares. Note que este argumento não depende do fato dos números envolvidos serem grandes ou pequenos.",
             "enun": "Qual das expressões abaixo tem como resultado um número ímpar?",
             "alter": [
                 "7 x 5 x 11 x 13 x 2",

@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, FlatList, Picker, TouchableOpacity, Dimensions, ActivityIndicator } from 'react-native'
+import { View, Text, Linking, StyleSheet, FlatList, Picker, TouchableOpacity, Dimensions, ActivityIndicator } from 'react-native'
 import { FloatingAction } from "react-native-floating-action";
 import ItemSimulado from '../Components/ItemSimulado'
 import { Dialog } from 'react-native-simple-dialogs';
 import Toast from 'react-native-simple-toast';
 import firebase from '../FirebaseConnection'
 import Sistema from '../Sistema'
+import DeviceInfo from 'react-native-device-info';
+import RNExitApp from 'react-native-exit-app';
 
 class Home extends Component {
     static navigationOptions = {
@@ -18,6 +20,7 @@ class Home extends Component {
             uid: '',
             name: this.props.navigation.state.params.name,
             dialogVisible: false,
+            dialogVersionAlertVisible: false,
             dialogInputAno: '',
             dialogInputNivel: '',
             loadSimuladosFirstTime: false,
@@ -78,6 +81,16 @@ class Home extends Component {
         }
     }
 
+    componentWillMount() {
+        Sistema.getVersionActualSystem(snapshot => {
+            if (Number(DeviceInfo.getVersion().split('_')[1]) < snapshot.val()) {
+                this.setState({ dialogVersionAlertVisible: true })
+            } else {
+                this.setState({ dialogVersionAlertVisible: false })
+            }
+        })
+    }
+
     render() {
         return (
             <View style={styles.container}>
@@ -95,6 +108,34 @@ class Home extends Component {
 
                 <Dialog
                     animationType='fade'
+                    visible={this.state.dialogVersionAlertVisible}
+                    titleStyle={{ fontWeight: 'bold', fontSize: 20 }}
+                    title=''
+                    onTouchOutside={() => {
+                        RNExitApp.exitApp();
+                    }}>
+                    <View>
+                        <Text style={{ fontSize: 18, paddingTop: 8, fontWeight: 'bold' }}>Atualize o App!</Text>
+                        <Text style={{ fontSize: 16, paddingTop: 20 }}>Nova versão disponível, para usar o app atualize-o na Play Store.</Text>
+                        <View style={{ flexDirection: 'row', marginTop: 38, justifyContent: 'flex-end' }}>
+                            <TouchableOpacity onPress={() => {
+                                this.setState({ dialogVersionAlertVisible: false })
+                                RNExitApp.exitApp();
+                            }}>
+                                <Text style={{ padding: 8, marginRight: 8 }}>Cancelar</Text>
+                            </TouchableOpacity>
+
+                            <TouchableOpacity onPress={() => {
+                                Linking.openURL("market://details?id=com.guilhermegabriel.contagemobmep");
+                            }}>
+                                <Text style={{ borderRadius: 4, padding: 8, backgroundColor: 'blue', color: 'white' }}>Atualizar</Text>
+                            </TouchableOpacity>
+                        </View>
+                    </View>
+                </Dialog>
+
+                <Dialog
+                    animationType='fade'
                     visible={this.state.dialogVisible}
                     titleStyle={{ fontWeight: 'bold', fontSize: 20 }}
                     title='Adicionar um novo simulado'
@@ -103,14 +144,17 @@ class Home extends Component {
                         this.floatingAction.animateButton();
                     }} >
                     <View>
-                        <Text style={{ fontWeight: 'bold', color: '#505050', marginBottom: 8, marginTop: 4 }}>Ano da prova</Text>
+                        <View >
+                            <Text style={{ fontWeight: 'bold', color: '#505050', marginTop: 4 }}>Ano da prova</Text>
+                            <Text style={{ fontSize: 12, fontWeight: 'bold', color: 'red', marginBottom: 8 }}>Apenas 2005 liberado no momento, estamos testando algumas coisas :)</Text>
+                        </View>
                         <View style={{ backgroundColor: '#cfcfcf', borderRadius: 4, marginLeft: -2 }}>
                             <Picker
                                 style={{ fontWeight: 'bold' }}
                                 selectedValue={this.state.dialogInputAno}
                                 onValueChange={(itemValue, itemIndex) => { this.setState({ dialogInputAno: itemValue }) }}>
                                 <Picker.Item label="Selecione o ano" value="" />
-                                <Picker.Item label="2019" value="2019" />
+                                {/*<Picker.Item label="2019" value="2019" />
                                 <Picker.Item label="2018" value="2018" />
                                 <Picker.Item label="2017" value="2017" />
                                 <Picker.Item label="2016" value="2016" />
@@ -124,7 +168,7 @@ class Home extends Component {
                                 <Picker.Item label="2009" value="2009" />
                                 <Picker.Item label="2008" value="2008" />
                                 <Picker.Item label="2007" value="2007" />
-                                <Picker.Item label="2006" value="2006" />
+                                <Picker.Item label="2006" value="2006" />*/}
                                 <Picker.Item label="2005" value="2005" />
                             </Picker>
                         </View>

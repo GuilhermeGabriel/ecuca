@@ -7,6 +7,12 @@ class FirebaseSistema {
 
     }
 
+    getVersionActualSystem(onSnapshot) {
+        return firebase.database()
+            .ref('versionActual')
+            .on('value', onSnapshot)
+    }
+
     createNewUser(uid, name, email, photo) {
         return firestore()
             .collection('users')
