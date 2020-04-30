@@ -70,7 +70,7 @@ export class Login extends Component {
                 // play services not available or outdated
             } else {
                 // some other error happened
-                alert('Ocorreu algum erro!')
+                //alert('Ocorreu algum erro!' + error.code)
             }
         }
     }

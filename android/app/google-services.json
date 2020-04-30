@@ -8,57 +8,12 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:92718398150:android:2bb532e11e3aaedaf575c7",
-        "android_client_info": {
-          "package_name": "com.ecuca"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "92718398150-jsmej8cmuj4s0n0rhr6s5tmf1afg4a5i.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.ecuca",
-            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
-          }
-        },
-        {
-          "client_id": "92718398150-mnle4efvao8iim164mf0e0bveg49ql0o.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBzYt5l4ClV6mWdl9Lp3Ic79SkUwxv8Ldk"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "92718398150-mnle4efvao8iim164mf0e0bveg49ql0o.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:92718398150:android:574e26480f5d8fb1f575c7",
         "android_client_info": {
           "package_name": "com.guilhermegabriel.contagemobmep"
         }
       },
       "oauth_client": [
-        {
-          "client_id": "92718398150-5sr0g0fh5o9pcg6kura36tem1h2kluem.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.guilhermegabriel.contagemobmep",
-            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
-          }
-        },
         {
           "client_id": "92718398150-mnle4efvao8iim164mf0e0bveg49ql0o.apps.googleusercontent.com",
           "client_type": 3
