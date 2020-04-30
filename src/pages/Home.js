@@ -147,7 +147,7 @@ class Home extends Component {
                     <View>
                         <View >
                             <Text style={{ fontWeight: 'bold', color: '#505050', marginTop: 4 }}>Ano da prova</Text>
-                            <Text style={{ fontSize: 12, fontWeight: 'bold', color: 'red', marginBottom: 8 }}>Apenas 2005 liberado no momento, estamos testando algumas coisas :)</Text>
+                            <Text style={{ fontSize: 12, fontWeight: 'bold', color: 'red', marginBottom: 8 }}>Apenas alguns anos liberados no momento, estamos testando algumas coisas :)</Text>
                         </View>
                         <View style={{ backgroundColor: '#cfcfcf', borderRadius: 4, marginLeft: -2 }}>
                             <Picker
@@ -168,8 +168,8 @@ class Home extends Component {
                                 <Picker.Item label="2010" value="2010" />
                                 <Picker.Item label="2009" value="2009" />
                                 <Picker.Item label="2008" value="2008" />
-                                <Picker.Item label="2007" value="2007" />
-                                <Picker.Item label="2006" value="2006" />*/}
+                                <Picker.Item label="2007" value="2007" />*/}
+                                <Picker.Item label="2006" value="2006" />
                                 <Picker.Item label="2005" value="2005" />
                             </Picker>
                         </View>

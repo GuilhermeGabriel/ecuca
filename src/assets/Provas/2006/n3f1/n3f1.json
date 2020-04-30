@@ -1,0 +1,244 @@
+{
+    "questions": [
+        {
+            "answer": "C",
+            "res": "",
+            "enun": "No retângulo ao lado, A, B e C são pontos médios de seus lados e O é o ponto de encontro de suas diagonais. A área da região sombreada é",
+            "alter": [
+                "1/4 da área do retângulo.",
+                "1/3 da área do retângulo.",
+                "1/2 da área do retângulo.",
+                "3/5 da área do retângulo.",
+                "2/3 da área do retângulo."
+            ]
+        },
+        {
+            "answer": "E",
+            "res": "",
+            "enun": "Qual dos seguintes números está mais próximo de 1?",
+            "alter": [
+                "1 + 1/2",
+                "1 - 1/8",
+                "1 + 1/5",
+                "1 - 1/3",
+                "1 + 1/10"
+            ]
+        },
+        {
+            "answer": "D",
+            "res": "Lemos na régua que x é maior que 1,5 e menor que 2, isto é, 1,5 < x < 2. Como 2 é positivo, podemos multiplicar todos os membros das duas desigualdades por 2 sem alterar os sinais, obtendo 3 < 2x < 4. Somando 2− a cada membro obtemos 1 < 2x –2 < 2, ou seja, 2 2x − está entre 1 e 2. Os números entre 1 e 2 assinalados na régua são U e o próprio x. Não é possível 2 pois neste caso x − 2 = x x = 2 , o que contradiz o fato 2 x < . Logo só podemos ter 2 . x − 2 = U",
+            "enun": "A figura representa parte de uma régua graduada de meio em meio centímetro, onde estão marcados alguns pontos. Qual deles melhor representa o número 2 2x − ?",
+            "alter": [
+                "R",
+                "S",
+                "T",
+                "U",
+                "V"
+            ]
+        },
+        {
+            "answer": "C",
+            "res": "Observando a figura da fita dobrada vemos que  x + 50° + 50° = 180° , donde x = 80° .",
+            "enun": "Uma tira de papel retangular é dobrada ao longo da linha tracejada, conforme indicado, formando a figura plana da direita. Qual o valor do ângulo x?",
+            "alter": [
+                "30°",
+                "50°",
+                "80°",
+                "100°",
+                "130o"
+            ]
+        },
+        {
+            "answer": "D",
+            "res": "Como ab = 60 e ac = 84 segue que a²bc = 60 × 84 = 5040. Temos também bc = 140, donde a² × 140 = 5040. Segue que a² = 36 e portanto a = 6. Logo b = 10 e c = 14.",
+            "enun": "Os comprimentos dos lados do triângulo da figura são números inteiros. Junto a cada vértice aparece o produto dos comprimentos dos lados a ele adjacentes. Qual é o perímetro do triângulo?",
+            "alter": [
+                "20",
+                "24",
+                "28",
+                "30",
+                "34"
+            ]
+        },
+        {
+            "answer": "A",
+            "res": "",
+            "enun": "No gráfico estão representadas as populações das cidades I, II, III, IV e V em 1990 e 2000, em milhares de habitantes. Por exemplo, em 1990 a população da cidade II era de 60 000 habitantes e em 2000 a cidade IV tinha 150 000 habitantes. Qual cidade teve o maior aumento percentual de popu- lação de 1990 a 2000?",
+            "alter": [
+                "I",
+                "II",
+                "III",
+                "IV",
+                "V"
+            ]
+        },
+        {
+            "answer": "D",
+            "res": "",
+            "enun": "Qual é a soma dos algarismos do número 1 + 10 + 10² + 10³ + ... + 10^2004 + 10^2005 + 10^2006?",
+            "alter": [
+                "1",
+                "10",
+                "2 006",
+                "2 007",
+                "20 060"
+            ]
+        },
+        {
+            "answer": "B",
+            "res": "Como os quatro triângulos são equiláteros, cada um de seus ângulos mede 60°. Logo a soma dos ângulos x, y, z e w na figura é x + y + z + w + 360° – 4 × 60° = 360° – 240° = 120°. Como 360° / 120° = 3  ÷ = a área cinza representa 1/3 da área do círculo, ou seja, ela mede  36 ÷ 3 = 12cm².",
+            "enun": "A figura mostra um círculo de área 36 cm² sobre o qual estão desenhados quatro triângulos eqüiláteros com um vértice comum no centro do círculo. Qual é a área da região sombreada?",
+            "alter": [
+                "9 cm²",
+                "12 cm²",
+                "15 cm²",
+                "20 cm²",
+                "24 cm²"
+            ]
+        },
+        {
+            "answer": "D",
+            "res": "",
+            "enun": "Vera preencheu com os algarismos 1, 2, 3 e 4 as onze casas que estão sem algarismo na tabela, de modo que em nenhuma linha e em nenhuma coluna apareces- sem dois algarismos iguais. Qual a soma dos números que Vera colocou nas casas marcadas com bolinhas pretas?",
+            "alter": [
+                "10",
+                "11",
+                "12",
+                "13",
+                "14"
+            ]
+        },
+        {
+            "answer": "E",
+            "res": "O número de questões de Aritmética que Júlia acertou foi 70% de 30 = 70/100 x 30 = 21 Por outro lado o total de questões que ela acertou foi 80% de (30 + 50) = 80/100 x 80 = 64. Júlia acertou 64 – 21 = 43 das 50 questões de Geometria. Logo o percentual de acertos em Geometria foi de 43/50 = 86/100 = 86%",
+            "enun": "Um trabalho de Matemática tem 30 questões de Aritmética e 50 de Geometria. Júlia acertou 70% das questões de Aritmética e 80% do total de questões. Qual o percentual das questões de Geometria que ela acertou?",
+            "alter": [
+                "43%",
+                "54%",
+                "58%",
+                "75%",
+                "86%"
+            ]
+        },
+        {
+            "answer": "C",
+            "res": "Ao montar o cubo, a face branca e a face cinza ficam opostas; logo as alternativas (A) e (B) estão excluídas. As alternativas (D) e (E) estão excluídas pois no cubo não podem aparecer um retângulo branco e outro cinza com um lado menor em comum.",
+            "enun": "",
+            "alter": [
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "answer": "D",
+            "res": "",
+            "enun": "Na figura os quatro círculos são tangentes e seus centros são vértices de um quadrado de lado 4 cm. Qual é o comprimento, em centíme-",
+            "alter": [
+                "2π",
+                "4π",
+                "6π",
+                "8π",
+                "10π"
+            ]
+        },
+        {
+            "answer": "C",
+            "res": "",
+            "enun": "",
+            "alter": [
+                "1000",
+                "1001",
+                "2000",
+                "2001",
+                "4000"
+            ]
+        },
+        {
+            "answer": "A",
+            "res": "Por tentativa e erro vemos que há apenas duas maneiras de cobrir a figura com quatro peças, conforme mostrado abaixo. Em ambas, a casa com o X é coberta pela peça I.",
+            "enun": "",
+            "alter": [
+                "I",
+                "II",
+                "III",
+                "IV",
+                "V"
+            ]
+        },
+        {
+            "answer": "C",
+            "res": "Para que o produto seja 100, cada algarismo deve ser um divisor de 100. Os algarismos divisores de 100 são 1, 2, 4 e 5. Não é possível obter o produto 100 com números que tenham apenas 1 ou 2 algarismos, logo os números procurados têm 3 ou 4 algarismos, por serem menores que 10 000.Vejamos como obter o produto 100 com 3 ou 4 desses algarismos. Para facilitar a listagem observamos que 8 não é divisor de 100, donde os algarismos 2 e 4 não podem aparecer num mesmo número. Logo os números procurados são:          • números de 3 algarismos: 455, 545, 554          • números de 4 algarismos: 1455, 1545, 1554, 4155, 4515, 4551, 5145, 5154, 5415, 5451, 5514, 5541, 2255, 2525, 2552, 5522, 5252, 5225. em um total de 21 números.",
+            "enun": "Quantos são os números menores que 10000 tais que o produto de seus algarismos seja 100? Por exemplo, 455 é um destes números, porque 100 4 × 5 × 5 = .",
+            "alter": [
+                "menos de 10",
+                "18",
+                "21",
+                "28",
+                "mais de 30"
+            ]
+        },
+        {
+            "answer": "C",
+            "res": "O número de maneiras de retirarmos duas bolas da caixa é 10, o que podemos ver listando as possibilidades: {1,2}, {1,3}, {1,4}, {1,5}, {2,3}, {2,4}, {2,5}, {3,4}, {3,5} e {4,5}. O 4 é o maior número escolhido em {1,4}, {2,4} e {3,4}, ou seja, em 3 casos. Logo a probabilidade pedida é 3/10",
+            "enun": "Uma caixa contém cinco bolas numeradas de 1 a 5. Dela são retiradas ao acaso duas bolas. Qual a probabilidade de que o maior número assim escolhido seja o 4?",
+            "alter": [
+                "1/10",
+                "1/5",
+                "3/10",
+                "2/5",
+                "1/2"
+            ]
+        },
+        {
+            "answer": "B",
+            "res": "A formiguinha (i) primeiro se afasta do centro, depois (ii) fica algum tempo à distância constante do centro, enquanto anda sobre a circunferência e finalmente (iii) retorna ao centro. A observação (ii) elimina as alternativas (C), (D) e (E) e a observação (iii) elimina a alternativa (A).",
+            "enun": "",
+            "alter": [
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "answer": "D",
+            "res": "",
+            "enun": "No dia de seu aniversário em 2006, o avô de Júlia disse a ela: “Eu nasci no ano x² e completei xanos em 1980. Quantos anos eu completo hoje?”. A resposta certa é:",
+            "alter": [
+                "61",
+                "64",
+                "67",
+                "70",
+                "72"
+            ]
+        },
+        {
+            "answer": "D",
+            "res": "",
+            "enun": "No triângulo ABC, o comprimento dos lados AB, BC e CA, nessa ordem, são números inteiros e conse- cutivos. A altura relativa a BC divide este lado em dois segmentos de com- primentos m e n, como indicado. Quanto vale m − n?",
+            "alter": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "6"
+            ]
+        },
+        {
+            "answer": "E",
+            "res": "",
+            "enun": "O número abcde tem cinco algarismos distintos e diferentes de zero, cada um deles representado por uma das letras a, b, c, d, e. Multiplicando-se este número por 4 obtém-se número de cinco algarismos edcba. Qual o valor de a + b + c + d + e?",
+            "alter": [
+                "22",
+                "23",
+                "24",
+                "25",
+                "27"
+            ]
+        }
+    ]
+}

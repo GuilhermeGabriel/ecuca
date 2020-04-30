@@ -1,0 +1,245 @@
+{
+    "questions": [
+        {
+            "answer": "C",
+            "res": "99 + 999 + 9 999 = (100 −1) + (1000 −1) + (10 000 −1) = 11100 − 3 = 11097.",
+            "enun": "Quanto é 99 + 999 + 9 999?",
+            "alter": [
+                "10 997",
+                "11 007",
+                "11 097",
+                "99 997",
+                "99 999"
+            ]
+        },
+        {
+            "answer": "D",
+            "res": "A balança mostra que o peso de Aninha com um mês de idade é de 4,1 quilos, ou seja, 4100 gramas. Aninha nasceu com 3250 gramas, logo ela engordou 850 4100 − 3250 = gramas em seu primeiro mês de vida.            Comentário: usamos aqui a palavra “peso” em lugar de “massa” devido a seu emprego coloquial.",
+            "enun": "Aninha nasceu com 3,250 quilos. A figura mostra Aninha sendo pesada com um mês de idade. Quanto ela engordou, em gramas, em seu primeiro mês de vida?",
+            "alter": [
+                "550",
+                "650",
+                "750",
+                "850",
+                "950"
+            ]
+        },
+        {
+            "answer": "E",
+            "res": "Na opção I o quadrado está dividido em quatro triângulos iguais, de modo que a área da região sombreada é a metade da área do quadrado. Na opção II, a diagonal divide o quadrado em dois triângulos iguais, e outra vez a área da região sombreada é metade da área do quadrado. Na opção III o triângulo sombreado  tem área menor do que o triângulo sombreado da opção II, ou seja, menor que metade da área do quadrado. Na opção IV, observamos na figura ao lado que a perpendicular MN ao segmento AB divide o quadrado nos pares de triângulos iguais AMN, ADN e BMN, BCN; segue mais uma vez que a área da região sombreada é metade da área do quadrado. Finalmente, a área do triângulo sombreado na opção V é maior do que a área do triângulo sombreado da opção II, ou seja, é maior do que metade da área do quadrado. Comentário: observamos que na opção IV o ponto N não precisa ser o ponto médio do lado CD. De fato, o argumento usado acima para analisar essa opção não depende da posição de N ao longo de CD.",
+            "enun": "Os quadrados abaixo têm todos o mesmo tamanho I II III IV V Em qual deles a região sombreada tem a maior área?",
+            "alter": [
+                "I",
+                "II",
+                "III",
+                "IV",
+                "V"
+            ]
+        },
+        {
+            "answer": "A",
+            "res": "Solução 1: Na figura vê-se que V está abaixo de R, que está abaixo de S, que está abaixo de U, que está abaixo de T. Logo a ordem em que os discos foram colocados sobre a mesa é V, R, S, U, T. Solução 2: T está acima de U, que por sua vez está acima de S e V. Como R está abaixo de S e acima de V vê-se que S foi colocado na mesa depois de V e R, e chegamos à mesma solução anterior.",
+            "enun": "Cinco discos de papelão foram colocados um a um sobre uma mesa, conforme mostra a figura. Em que ordem os discos foram colocados na mesa?",
+            "alter": [
+                "V, R, S, U, T",
+                "U, R, V, S, T",
+                "R, S, U, V, T",
+                "T, U, R, V, S",
+                "V, R, U, S, T"
+            ]
+        },
+        {
+            "answer": "C",
+            "res": "Temos 9870 x 1,54 = 987 x 10 x 154/100 = (987 x 154)/10 = 151998/10 = 15199,8",
+            "enun": "Sabendo que 987 × 154 = 151 998 podemos concluir que 9870 × 1,54 é igual a",
+            "alter": [
+                "15,1998",
+                "1 519,98",
+                "15 199,8",
+                "151 998",
+                "1 519 980"
+            ]
+        },
+        {
+            "answer": "B",
+            "res": "Solução 1: Se Pedro não tivesse trocado os preços, a quantia que ele teria recebido pela venda de 100 quilos de cenoura e 120 quilos de tomate seria 232 100 ×1+120 ×1,10 = 100 +132 = reais. A quantia que ele recebeu, de fato, foi de 230 100 ×1,10 +120 ×1= 110 +120 = reais. Logo, por causa de sua distração, ele perdeu 2 232 − 230 = reais. Solução 2: Como a diferença dos preços dos dois produtos é R$ 0,10 por quilo, ao trocar os preços Pedro ganhou 10 100 × 0,10 = reais na venda das cenouras e perdeu 12 120 × 0,10 = reais na venda dos tomates. Logo, no final, ele perdeu 2 reais.",
+            "enun": "Pedro vende na feira cenouras a R$1,00 por quilo e tomates a R$1,10 por quilo. Certo dia ele se distraiu, trocou os preços entre si, e acabou vendendo 100 quilos de cenoura e 120 quilos de tomate pelos preços trocados. Quanto ele deixou de receber por causa de sua distração?",
+            "alter": [
+                "R$ 1,00",
+                "R$ 2,00",
+                "R$ 4,00",
+                "R$ 5,00",
+                "R$ 6,00"
+            ]
+        },
+        {
+            "answer": "E",
+            "res": "",
+            "enun": "Dois casais de namorados vão sentar-se em um banco de uma praça. Em quantas ordens diferentes os quatro podem sentar-se no banco, de modo que cada namorado fique ao lado de sua namorada?",
+            "alter": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "8"
+            ]
+        },
+        {
+            "answer": "D",
+            "res": "Um quadrado de lado l tem área l². Os lados dos quadrados de áreas 25 cm² e 9 cm² medem respectivamente, 5 cm e 3 cm. Segue que o lado do quadrado menor mede 5-3 = 2cm. O con- torno da figura é formado por 3 lados de 5 cm, 2 lados de 3 cm, 2 lados de 2 cm e um segmento que é a diferença entre um lado de 3 cm e outro de 2 cm, donde o perímetro é3 × 5 + 2× 3 + 2× 2 + (3 − 2) = 26 cm.",
+            "enun": "A figura é formada por três quadrados, um deles com área de 25 cm2 e o, outro com 9 cm2. Qual é o períme- tro da figura?",
+            "alter": [
+                "20 cm",
+                "22 cm",
+                "24 cm",
+                "26 cm",
+                "38 cm"
+            ]
+        },
+        {
+            "answer": "D",
+            "res": "",
+            "enun": "Uma professora de Matemática escreveu uma expressão no quadro-negro e precisou sair da sala antes de resolvê-la com os alunos. Na ausência da professora, Carlos, muito brincalhão, foi ao quadro- negro e trocou todos os algarismos 3 por 5, os 5 por 3, o sinal de + pelo de × e o de × pelo de +, e a expres- são passou a ser (13 ÷ 5) × (53 + 2) − 25. Qual é o resultado da expressão que a professora escreveu?",
+            "alter": [
+                "22",
+                "32",
+                "42",
+                "52",
+                "62"
+            ]
+        },
+        {
+            "answer": "D",
+            "res": "",
+            "enun": "Rosa preencheu com os algarismos 1, 2, 3 e 4 as oito casas que estão sem algarismo na tabela, de modo que em nenhuma linha e em nenhuma coluna apare- cessem dois algarismos iguais. Qual a soma dos números que Rosa colocou nas casas marcadas com bolinhas pretas?",
+            "alter": [
+                "10",
+                "11",
+                "12",
+                "13",
+                "14"
+            ]
+        },
+        {
+            "answer": "C",
+            "res": "Como o resultado da multiplicação é um número de três algarismos, então □ só pode representar 1, 2 ou 3. Logo não “vai 1” quando multiplicamos □ (multiplicador) por □ (algarismo das unidades do multiplicando) e assim □ × 2 = 6, donde □ = 3 e ∆ = 9. Portanto □ × ∆ = 27.",
+            "enun": "",
+            "alter": [
+                "12",
+                "15",
+                "27",
+                "39",
+                "45"
+            ]
+        },
+        {
+            "answer": "A",
+            "res": "Para montar o quadrado maior, a peça de um quadradinho não poderá ocupar nenhuma das quatro casas sombreadas na figura ao lado. Logo César só pode ter escrito nessa peça os seguintes números: 12, 25, 14, 20 ou 16. Examinemos agora cada uma das opções: (A) todos esses números são maiores que 9 (B) nenhum desses números é menor que 11 (C) nenhum desses números é maior que 27 (D) nenhum desses números é par menor que 10 (E) nenhum desses números está entre 21 e 24 donde temos a opção correta.",
+            "enun": "",
+            "alter": [
+                "um número maior que 9",
+                "um número menor que 11.",
+                "um número ímpar maior que 27.",
+                "um número par menor que 10.",
+                "um número maior que 21 e menor que 24."
+            ]
+        },
+        {
+            "answer": "A",
+            "res": "",
+            "enun": "No gráfico estão representadas as populações das cidades I, II, III, IV e V em 1990 e 2000, em milhares de habitantes. Por exemplo, em 1990 a população da cidade II era de 60 000 habitantes e em 2000 a cidade IV tinha 150 000 habitantes.Qual cidade teve o maior aumento percentual de popu- lação de 1990 a 2000?",
+            "alter": [
+                "I",
+                "II",
+                "III",
+                "IV",
+                "V"
+            ]
+        },
+        {
+            "answer": "D",
+            "res": "A região sombreada é formada pelo quadrado central, quatro retângulos cada um com metade da área de um quadrado e quatro triângulos cada um com um oitavo da área de um quadrado. Logo a área da região sombreada é 1 + 4 × 1/2 + 4 × 1/8 = 3,5 cm²",
+            "enun": "Na figura, os cinco quadrados são iguais e os vértices do polígono sombreado são pontos médios do lados dos quadrados. Se a área de cada quadrado é 1 cm², qual a área do polígono sombreado?",
+            "alter": [
+                "2 cm²",
+                "2,5 cm²",
+                "3 cm²",
+                "3,5 cm²",
+                "4 cm²"
+            ]
+        },
+        {
+            "answer": "D",
+            "res": "Inicialmente o fabricante cobrava R$ 20,00 por quilo e passou, com o aumento de preço, a cobrar R$ 25,00 por quilo. Logo o aumento do preço foi de R$ 5,00 por quilo e o aumento percentual de 5/20 = 25%",
+            "enun": "Um fabricante de chocolate cobrava R$ 5,00 por uma barra de 250 gramas. Recentemente o peso da barra foi reduzido para 200 gra- mas, mas seu preço continuou R$ 5,00. Qual foi o aumento percentual do preço do chocolate desse fabricante?",
+            "alter": [
+                "10%",
+                "15%",
+                "20%",
+                "25%",
+                "30%"
+            ]
+        },
+        {
+            "answer": "D",
+            "res": "",
+            "enun": "Em uma caixa quadrada há 4 bolas brancas e 2 bolas pretas, e numa caixa redonda há 6 bolas, todas pretas. Paula quer que tanto na caixa quadrada quanto na redonda a razão entre a quantidade de bolas brancas e o total de bolas em cada caixa seja a mesma. Quantas bolas brancas Paula precisa tirar da caixa quadrada e passar para a caixa redonda?",
+            "alter": [
+                "nenhuma",
+                "1",
+                "2",
+                "3",
+                "4"
+            ]
+        },
+        {
+            "answer": "C",
+            "res": "Ao montar o cubo, a face branca e a face cinza ficam opostas; logo as alternativas (A) e (B) estão excluídas. As alternativas (D) e (E) estão excluídas pois no cubo não podem aparecer um retângulo branco e outro cinza com um lado menor em comum.",
+            "enun": "",
+            "alter": [
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "answer": "D",
+            "res": "",
+            "enun": "Colocando sinais de adição entre alguns dos algarismos do número 123456789 podemos obter várias somas. Por exemplo, podemos obter 279 com quatro sinais de adição: 123 + 4 + 56 + 7 + 89 = 279. Quantos sinais de adição são necessários para que se obtenha assim o número 54?",
+            "alter": [
+                "4",
+                "5",
+                "6",
+                "7",
+                "8"
+            ]
+        },
+        {
+            "answer": "C",
+            "res": "Como  1+ 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 +10 +11+12 = 78, a soma de duas faces opostas em cada cubo é 78 ÷ 6 = 13 . Logo, no cubo à direita, a face oposta à face 3 é a face 10, que é então uma das faces coladas. Falta descobrir qual a face do outro cubo que foi colada . Como é uma face par, só pode ser 6, 8 ou 12, porque já sabemos onde estão as faces 2, 4 e 10. Olhando para o cubo da esquerda vemos que a face 1 é oposta à face 12 e a face 5 oposta à face 8. Logo, nesse cubo, a face colada foi a 6. Portanto a resposta é 6 × 10 = 60.",
+            "enun": "As doze faces de dois cubos foram marcadas com números de 1 a 12, de modo que a soma dos números de duas faces opostas em qualquer um dos cubos é sempre a mesma. Joãozinho colou duas faces com números pares, obtendo a figura ao lado. Qual o produto dos números das faces coladas?",
+            "alter": [
+                "42",
+                "48",
+                "60",
+                "70",
+                "72"
+            ]
+        },
+        {
+            "answer": "E",
+            "res": "Como 750 950 + 550 = 1500 = 2× , uma solução é café na xícara I, suco na II, café na III, leite na IV e na V. Nessa solução temos apenas uma xícara com suco. Será que existe outra solução com suco em duas xícaras? Se sim, teríamos duas possibilidades para a quantidade de suco: i. 475+ 325= 800ml (suco nas duas xícaras menores) Nesse caso teríamos 1600 ml de café o que é impossível obter com 1 ou 2 xícaras dentre as I, II e III ou ii. maior do que 800 ml; nesse caso a quantidade de café seria maior que 1600 800 × 2 = ml, o que só pode ocorrer com café nas xícaras I e II, que somam 1700 950 + 750 = ml. Neste caso a quantidade de suco seria 850 ml, o que não pode ocorrer com as demais xícaras. Logo há suco em apenas uma xícara, donde a única solução possível é a dada acima.",
+            "enun": "Cada uma das 5 xícaras da figura está cheia só com café, só com leite ou só com suco. No total, a quantidade de café é o dobro da de suco. Nenhuma das bebidas está em mais de 2 xícaras diferentes. Quais as xícaras que contêm leite?",
+            "alter": [
+                "apenas a xícara I",
+                "as xícaras III e IV",
+                "as xícaras II e V",
+                "as xícaras III e V",
+                "as xícaras IV e V"
+            ]
+        }
+        
+    ]
+}
