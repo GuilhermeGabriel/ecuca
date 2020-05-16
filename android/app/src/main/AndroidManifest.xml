@@ -1,18 +1,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.guilhermegabriel.contagemobmep">
+  package="com.ecuca.android">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="com.android.vending.BILLING" />
 
     <application
-      android:name="com.guilhermegabriel.contagemobmep.MainApplication"
+      android:name="com.ecuca.android.MainApplication"
       android:label="@string/app_name"
       android:icon="@mipmap/ic_launcher"
       android:roundIcon="@mipmap/ic_launcher_round"
       android:allowBackup="false"
       android:theme="@style/AppTheme">
       <activity
-        android:name="com.guilhermegabriel.contagemobmep.MainActivity"
+        android:name="com.ecuca.android.MainActivity"
         android:label="@string/app_name"
         android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
         android:launchMode="singleTask"

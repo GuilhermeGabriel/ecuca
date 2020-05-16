@@ -1,4 +1,4 @@
-package com.guilhermegabriel.contagemobmep;
+package com.ecuca.android;
 
 import com.facebook.react.ReactActivity;
 
